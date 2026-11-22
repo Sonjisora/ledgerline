@@ -4,10 +4,10 @@ export default async (req) => {
     const topic = "How to structure international business operations";
 
     // 2. Model fallback list - try each model until one works
+    // Based on Groq deprecations page, only use currently available models
     const models = [
-      "llama-3.1-8b-instant",   // Fast, available
-      "llama-3.3-70b-versatile", // Powerful, may be rate-limited
-      "mixtral-8x7b-32768",      // Alternative model
+      "llama-3.1-8b-instant",   // Fast, most reliably available
+      "llama-3.3-70b-versatile", // Powerful, check rate limits
     ];
 
     let groqRes = null;
