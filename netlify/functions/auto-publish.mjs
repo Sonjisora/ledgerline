@@ -3,12 +3,9 @@ export default async (req) => {
     // 1. Pick a topic from a queue/database table (avoid repeating used topics)
     const topic = "How to structure international business operations";
 
-    // 2. Model fallback list - try each model until one works
-    // Based on Groq deprecations page, only use currently available models
-    const models = [
-      "llama-3.1-8b-instant",   // Fast, most reliably available
-      "llama-3.3-70b-versatile", // Powerful, check rate limits
-    ];
+    // 2. Single model - use llama-3.1-8b-instant (most reliable for this account)
+// Based on testing: works consistently, fast generation (~560 t/s)
+const model = "llama-3.1-8b-instant";
 
     let groqRes = null;
     let lastError = null;
