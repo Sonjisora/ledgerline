@@ -50,6 +50,8 @@ h1{font-size:clamp(34px,5vw,56px);letter-spacing:-.04em;line-height:1.05;margin:
 .form-status{margin:14px 0 0;font-size:14px;color:var(--mute)}
 .form-status:empty{display:none}
 .post-section h3{font-size:19px;margin:28px 0 8px;letter-spacing:-.01em}
+.post-delete{margin-top:16px;background:transparent;color:#b42318;border:1px solid currentColor;padding:6px 14px;border-radius:999px;font:inherit;font-size:13px;font-weight:600;cursor:pointer}
+.post-delete:disabled{opacity:.6;cursor:wait}
 .post details summary{cursor:pointer;margin-top:12px;font-weight:600;color:var(--ink)}
 @media(max-width:767px){.desktop-nav{display:none}.mobile-nav{display:flex;gap:20px;padding:0 20px 12px;overflow-x:auto}}
 </style>
@@ -148,16 +150,38 @@ h1{font-size:clamp(34px,5vw,56px);letter-spacing:-.04em;line-height:1.05;margin:
         if(location.hash&&location.hash.slice(1)===post.slug)details.open=true;
         article.appendChild(details);
       }
+      if(post._local&&post.slug){
+        var del=el('button','post-delete','Delete article');del.type='button';
+        del.addEventListener('click',function(){deleteArticle(post,del)});
+        article.appendChild(del);
+      }
       area.appendChild(article);
     });
     status.hidden=true;area.hidden=false;
   }
   window.renderArticles=renderArticles;
 
+  function deleteArticle(post,btn){
+    var password=window.prompt('Enter the admin password to delete "'+(post.title||'this article')+'":');
+    if(!password)return;
+    if(!window.confirm('Delete this article permanently?'))return;
+    btn.disabled=true;btn.textContent='Deleting…';
+    fetch('/api/articles',{method:'DELETE',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({slug:post.slug,password:password})})
+      .then(function(r){
+        return r.json().catch(function(){return null}).then(function(data){
+          if(!r.ok||!data||!data.success)throw new Error((data&&data.error)||('HTTP '+r.status));
+        });
+      })
+      .then(function(){load()})
+      .catch(function(err){window.alert('Delete failed: '+err.message);btn.disabled=false;btn.textContent='Delete article'});
+  }
+
   function load(){
     var cfg=window.LEDGERLINE_BLOG_CONFIG||{};
     var local=fetch('/api/articles',{headers:{Accept:'application/json'}})
-      .then(function(r){if(!r.ok)throw new Error(r.status);return r.json()});
+      .then(function(r){if(!r.ok)throw new Error(r.status);return r.json()})
+      .then(function(rows){return (Array.isArray(rows)?rows:[]).map(function(p){p._local=true;return p})});
     var remote=(cfg.supabaseUrl&&cfg.publishableKey)?fetch(cfg.supabaseUrl.replace(/\/$/,'')+'/rest/v1/blog_posts?select=slug,title,description,sections,published_at&is_published=eq.true&order=published_at.desc&limit=50',{
       headers:{apikey:cfg.publishableKey,Accept:'application/json'}
     }).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}):Promise.resolve([]);

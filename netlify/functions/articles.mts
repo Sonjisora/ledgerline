@@ -1,11 +1,25 @@
 import type { Config } from "@netlify/functions";
-import Anthropic from "@anthropic-ai/sdk";
-import { desc } from "drizzle-orm";
+import { desc, eq } from "drizzle-orm";
 import { timingSafeEqual, createHash } from "node:crypto";
 import { db } from "../../db/index.js";
 import { articles, type ArticleSection } from "../../db/schema.js";
 
-const MODEL = "claude-haiku-5-5";
+// ---------------------------------------------------------------------------
+// AI provider settings — change the models here if you want.
+// The provider is picked automatically from the API keys you set in Netlify:
+//   GROQ_API_KEY   -> Groq (tried first)
+//   GEMINI_API_KEY -> Google Gemini (used if Groq isn't set, or as a fallback)
+// ---------------------------------------------------------------------------
+const GROQ_MODEL = "llama-3.3-70b-versatile";
+const GEMINI_MODEL = "gemini-2.5-flash";
+
+const SYSTEM_PROMPT =
+  "You write clear, practical, original blog articles for Ledgerline, a site serving online business owners. " +
+  "Write in plain English with concrete, useful advice. Do not invent statistics, quotes, or legal guarantees. " +
+  "Plain text only in paragraphs (no markdown). " +
+  'Respond ONLY with a JSON object of the form {"title": string (max 110 characters), ' +
+  '"description": string (120-160 character summary), ' +
+  '"sections": [{"heading": string, "paragraphs": [string, ...]}]} with 4-6 sections of 2-4 paragraphs each.';
 
 function json(body: unknown, status = 200) {
   return Response.json(body, { status, headers: { "Cache-Control": "no-store" } });
@@ -32,6 +46,11 @@ function slugify(text: string) {
 
 type Generated = { title: string; description: string; sections: ArticleSection[] };
 
+function parseJson(text: string) {
+  const cleaned = text.trim().replace(/^```(?:json)?\s*/i, "").replace(/```$/, "").trim();
+  return JSON.parse(cleaned);
+}
+
 function validate(value: any): Generated {
   if (!value || typeof value.title !== "string" || typeof value.description !== "string" || !Array.isArray(value.sections)) {
     throw new Error("The model returned an article in an unexpected format.");
@@ -47,28 +66,56 @@ function validate(value: any): Generated {
   return { title: value.title.trim(), description: value.description.trim(), sections };
 }
 
-async function generate(title: string, excerpt: string): Promise<Generated> {
-  const anthropic = new Anthropic();
-  const message = await anthropic.messages.create({
-    model: MODEL,
-    max_tokens: 4096,
-    tools: [
-      {
-        name: "publish_article",
-        description: "Publish the finished blog article.",
-        input_schema: {
-          type: "object",
+function userPrompt(title: string, excerpt: string) {
+  return `Write a blog article.\n\nWorking title: ${title}\n\nWhat it should cover:\n${excerpt}`;
+}
+
+async function generateWithGroq(apiKey: string, title: string, excerpt: string): Promise<Generated> {
+  const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+    method: "POST",
+    headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
+    body: JSON.stringify({
+      model: GROQ_MODEL,
+      temperature: 0.7,
+      max_tokens: 4096,
+      response_format: { type: "json_object" },
+      messages: [
+        { role: "system", content: SYSTEM_PROMPT },
+        { role: "user", content: userPrompt(title, excerpt) },
+      ],
+    }),
+  });
+  if (!res.ok) throw new Error(`Groq error ${res.status}: ${(await res.text()).slice(0, 300)}`);
+  const data: any = await res.json();
+  const content = data?.choices?.[0]?.message?.content;
+  if (typeof content !== "string") throw new Error("Groq returned no content.");
+  return validate(parseJson(content));
+}
+
+async function generateWithGemini(apiKey: string, title: string, excerpt: string): Promise<Generated> {
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`;
+  const res = await fetch(url, {
+    method: "POST",
+    headers: { "x-goog-api-key": apiKey, "Content-Type": "application/json" },
+    body: JSON.stringify({
+      systemInstruction: { parts: [{ text: SYSTEM_PROMPT }] },
+      contents: [{ role: "user", parts: [{ text: userPrompt(title, excerpt) }] }],
+      generationConfig: {
+        temperature: 0.7,
+        maxOutputTokens: 8192,
+        responseMimeType: "application/json",
+        responseSchema: {
+          type: "OBJECT",
           properties: {
-            title: { type: "string", description: "Final article title (max 110 characters)." },
-            description: { type: "string", description: "120-160 character summary / meta description." },
+            title: { type: "STRING" },
+            description: { type: "STRING" },
             sections: {
-              type: "array",
-              description: "4-6 sections.",
+              type: "ARRAY",
               items: {
-                type: "object",
+                type: "OBJECT",
                 properties: {
-                  heading: { type: "string" },
-                  paragraphs: { type: "array", items: { type: "string" }, description: "2-4 paragraphs." },
+                  heading: { type: "STRING" },
+                  paragraphs: { type: "ARRAY", items: { type: "STRING" } },
                 },
                 required: ["heading", "paragraphs"],
               },
@@ -77,22 +124,47 @@ async function generate(title: string, excerpt: string): Promise<Generated> {
           required: ["title", "description", "sections"],
         },
       },
-    ],
-    tool_choice: { type: "tool", name: "publish_article" },
-    system:
-      "You write clear, practical, original blog articles for Ledgerline, a site serving online business owners. " +
-      "Write in plain English with concrete, useful advice. Do not invent statistics, quotes, or legal guarantees. " +
-      "Plain text only in paragraphs (no markdown).",
-    messages: [
-      {
-        role: "user",
-        content: `Write a blog article.\n\nWorking title: ${title}\n\nWhat it should cover:\n${excerpt}`,
-      },
-    ],
+    }),
   });
-  const block = message.content.find((b) => b.type === "tool_use");
-  if (!block || block.type !== "tool_use") throw new Error("The model did not return an article.");
-  return validate(block.input);
+  if (!res.ok) throw new Error(`Gemini error ${res.status}: ${(await res.text()).slice(0, 300)}`);
+  const data: any = await res.json();
+  const text = (data?.candidates?.[0]?.content?.parts || []).map((p: any) => p?.text || "").join("");
+  if (!text) throw new Error("Gemini returned no content.");
+  return validate(parseJson(text));
+}
+
+function providers() {
+  const list: { name: string; run: (title: string, excerpt: string) => Promise<Generated> }[] = [];
+  const groqKey = process.env.GROQ_API_KEY;
+  if (groqKey) list.push({ name: "groq", run: (t, e) => generateWithGroq(groqKey, t, e) });
+  // Only use Gemini with your own Google AI Studio key (not a Netlify AI Gateway key).
+  const geminiKey = process.env.GEMINI_API_KEY;
+  if (geminiKey && !process.env.GOOGLE_GEMINI_BASE_URL) {
+    list.push({ name: "gemini", run: (t, e) => generateWithGemini(geminiKey, t, e) });
+  }
+  return list;
+}
+
+async function generate(title: string, excerpt: string): Promise<Generated> {
+  const list = providers();
+  let lastError: unknown = null;
+  for (const provider of list) {
+    try {
+      return await provider.run(title, excerpt);
+    } catch (error) {
+      console.error(`Article generation with ${provider.name} failed:`, error);
+      lastError = error;
+    }
+  }
+  throw lastError || new Error("No AI provider configured.");
+}
+
+async function readBody(req: Request) {
+  try {
+    return await req.json();
+  } catch {
+    return null;
+  }
 }
 
 export default async (req: Request) => {
@@ -111,18 +183,29 @@ export default async (req: Request) => {
     return json(rows);
   }
 
-  if (req.method === "POST") {
-    let body: any;
-    try {
-      body = await req.json();
-    } catch {
-      return json({ success: false, error: "Invalid request." }, 400);
-    }
+  if (req.method === "POST" || req.method === "DELETE") {
+    const body: any = await readBody(req);
+    if (!body) return json({ success: false, error: "Invalid request." }, 400);
     if (!process.env.BLOG_ADMIN_PASSWORD) {
       return json({ success: false, error: "Publishing is not configured yet." }, 503);
     }
     if (!passwordMatches(String(body?.password || ""))) {
-      return json({ success: false, error: "Incorrect publishing password." }, 401);
+      return json({ success: false, error: "Incorrect password." }, 401);
+    }
+
+    if (req.method === "DELETE") {
+      const slug = String(body?.slug || "").trim();
+      if (!slug) return json({ success: false, error: "Missing article." }, 400);
+      const deleted = await db.delete(articles).where(eq(articles.slug, slug)).returning({ slug: articles.slug });
+      if (!deleted.length) return json({ success: false, error: "Article not found." }, 404);
+      return json({ success: true, slug });
+    }
+
+    if (!providers().length) {
+      return json(
+        { success: false, error: "No AI provider is configured. Add GROQ_API_KEY or GEMINI_API_KEY in Netlify." },
+        503,
+      );
     }
     const title = String(body?.title || "").trim().slice(0, 200);
     const excerpt = String(body?.excerpt || "").trim().slice(0, 1000);
