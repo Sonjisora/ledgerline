@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i="pageTitlePolicies">Policies — Ledgerline</title>
+<meta name="description" content="Review Ledgerline's account handover, privacy, refund, and replacement warranty policies.">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<script>(function(){var m='auto',e=document.documentElement;try{m=localStorage.getItem('thm')||'auto'}catch(x){}var d=matchMedia('(prefers-color-scheme:dark)').matches;e.setAttribute('data-theme',m==='auto'?(d?'dark':'light'):m);e.setAttribute('data-mode',m)})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<style>
+:root{--bg:#fafaf7;--surface:#fff;--ink:#0e0f0c;--mute:#6b6d66;--line:#e6e6e0;--accent:#0e0f0c;--accent-ink:#fff;--soft:#f1f1ec;box-sizing:border-box}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0c0a;--surface:#131411;--ink:#f3f3ee;--mute:#9a9c94;--line:#24251f;--accent:#f3f3ee;--accent-ink:#0b0c0a;--soft:#1a1b17}}
+:root[data-theme="dark"]{--bg:#0b0c0a;--surface:#131411;--ink:#f3f3ee;--mute:#9a9c94;--line:#24251f;--accent:#f3f3ee;--accent-ink:#0b0c0a;--soft:#1a1b17}
+*{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Plus Jakarta Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{width:min(1120px,100%);margin:0 auto;padding:0 20px}
+.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top-row{min-height:66px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:9px;color:var(--ink);text-decoration:none;font-size:19px;font-weight:800;white-space:nowrap}
+.brand-mark{width:24px;height:24px;border-radius:7px;background:var(--accent);position:relative}
+.brand-mark:after{content:"";position:absolute;left:6px;right:6px;top:11px;height:2px;background:var(--accent-ink);border-radius:2px}
+.desktop-nav{display:flex;align-items:center;gap:26px}
+.nav-link{color:var(--mute);text-decoration:none;font-size:14px;white-space:nowrap}
+.nav-link:hover{color:var(--ink)}
+.mobile-nav{display:none}
+.theme{width:38px;height:38px;border:1px solid var(--line);border-radius:50%;background:var(--surface);color:var(--ink);font:inherit;cursor:pointer}
+.main{max-width:960px;margin:0 auto;padding:72px 20px 96px}
+.eyebrow{font:12px 'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.08em;color:var(--mute)}
+h1{font-size:clamp(34px,5vw,56px);letter-spacing:-.04em;line-height:1.05;margin:12px 0}
+.intro,.policy-card p{color:var(--mute);line-height:1.75}
+.policy-tabs{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 36px}
+.policy-tab{padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font-size:13px;font-weight:600;text-decoration:none}
+.policy-tab:hover{border-color:var(--ink)}
+.policy-card{scroll-margin-top:88px;margin-bottom:20px;padding:30px;background:var(--surface);border:1px solid var(--line);border-radius:20px}
+.policy-card h2{font-size:26px;font-weight:800;margin-top:8px}
+.policy-card h3{font-size:18px;font-weight:700;margin:22px 0 0}
+.policy-card p{margin:8px 0 0}
+.policy-label{font:12px 'JetBrains Mono',monospace;color:var(--mute)}
+.policy-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:20px}
+.policy-list{margin:12px 0 0;padding-inline-start:20px;color:var(--mute);line-height:1.7}
+.policy-list li{margin-bottom:8px}
+.policy-highlight{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:18px}
+.policy-highlight-label{font:600 12px 'JetBrains Mono',monospace}
+.policy-highlight-label.covered{color:var(--ok)}
+.policy-highlight-label.excluded{color:#c2410c}
+.policy-contact{background:var(--soft);text-align:center;padding:36px}
+.policy-contact h2{font-size:24px}
+.policy-contact p{max-width:540px;margin:10px auto 24px}
+.policy-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.policy-actions a{display:inline-flex;padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none}
+.policy-actions .primary{background:var(--accent);color:var(--accent-ink)}
+.policy-actions .secondary{background:transparent;color:var(--ink);border:1px solid var(--line)}
+@media(max-width:767px){.wrap{padding-inline:16px}.desktop-nav{display:none}.mobile-nav{display:flex;gap:24px;overflow-x:auto;padding:0 16px 12px;border-top:1px solid var(--line);scrollbar-width:none}.mobile-nav::-webkit-scrollbar{display:none}.main{padding:64px 16px 96px}}
+@media(max-width:600px){.policy-card{padding:22px}.policy-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="Main navigation">
+  <div class="wrap top-row">
+    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span>Ledgerline</a>
+    <div class="desktop-nav">
+      <a class="nav-link" href="/" data-i="navHome">Home</a>
+      <a class="nav-link" href="feedbacks.html" data-i="navFeedbacks">Feedbacks</a>
+      <a class="nav-link" href="/#start" data-i="footerContact">Contact</a>
+    </div>
+    <div class="top-controls">
+      <select id="language" class="site-language" aria-label="Language"><option value="auto">Auto</option><option value="en">English</option><option value="fr">Français</option><option value="es">Español</option><option value="ar">العربية</option><option value="zh">中文</option></select>
+      <button class="theme" id="theme" type="button" aria-label="Change color theme" title="Auto, light, or dark theme"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 15.4A8.5 8.5 0 018.6 3.8 8.5 8.5 0 1020.2 15.4Z"/></svg></button>
+      <a class="site-header-cta" href="/#start" data-i="cta">Buy Account</a>
+    </div>
+  </div>
+  <div class="mobile-nav" aria-label="More navigation">
+    <a class="nav-link" href="/" data-i="navHome">Home</a>
+    <a class="nav-link" href="feedbacks.html" data-i="navFeedbacks">Feedbacks</a>
+    <a class="nav-link" href="/#start" data-i="footerContact">Contact</a>
+  </div>
+</nav>
+<main class="main">
+  <div class="eyebrow" data-i="policiesEyebrow">Policies &amp; Buyer Protection</div>
+  <h1 data-i="policiesTitle">Terms, Handover Standards &amp; Refund Policy.</h1>
+  <p class="intro" data-i="policiesIntro">Last updated: November 2026. Please review our handover guidelines and 30-day warranty terms below before placing an order.</p>
+  <nav class="policy-tabs" aria-label="Policy sections">
+    <a href="#refund" class="policy-tab" data-i="policiesTabRefund">Refund &amp; 30-Day Warranty</a>
+    <a href="#accounts" class="policy-tab" data-i="policiesTabAccounts">Account Handover Terms</a>
+    <a href="#privacy" class="policy-tab" data-i="policiesTabPrivacy">Privacy &amp; Discretion</a>
+  </nav>
+
+  <section id="refund" class="policy-card">
+    <div class="policy-label" data-i="policyRefundLabel">● 30-DAY WARRANTY &amp; REFUND POLICY</div>
+    <h2 data-i="policyRefundTitle">Refunds &amp; Replacement Coverage</h2>
+    <p data-i="policyRefundIntro">We stand behind every pre-verified account we deliver. Please review how pre-delivery cancellations, unused accounts, and our up to 30-day replacement warranty work:</p>
+
+    <h3 data-i="policyCancelTitle">1. Pre-Handover Cancellation (100% Refund)</h3>
+    <p data-i="policyCancelText">If an ordered package is out of stock or has not yet been delivered within the agreed delivery window, the buyer may request a full 100% refund via the original payment method before credential handover.</p>
+
+    <h3 data-i="policyUnusedTitle">2. Unused Account Return Window (Within 30 Days)</h3>
+    <p data-i="policyUnusedText">Unused accounts—where credentials have not been altered, no live transactions have been processed, no payout bank/IBAN has been linked, and no platform security flags have been triggered—may be reviewed for an exchange or partial/full credit within 30 days of purchase, subject to verification of the account's untouched state. Because digital account credentials and 2FA keys cannot be revoked once accessed and modified, cash or crypto refunds are not issued after credentials have been used, modified, or connected to a live store, except where replacement stock is unavailable under an active warranty claim.</p>
+
+    <h3 data-i="policyWarrantyTitle">3. Up to 30-Day Replacement Warranty</h3>
+    <p data-i="policyWarrantyText">Eligible accounts include up to 30 days of replacement coverage from the date of delivery against initial verification holds or unexpected lockouts that occur despite following Ledgerline's handover guidelines. If a valid claim cannot be resolved with a matching replacement account within 48 hours, Ledgerline will issue a prorated or full refund depending on usage duration.</p>
+
+    <div class="policy-grid">
+      <div class="policy-highlight">
+        <div class="policy-highlight-label covered" data-i="policyCoveredLabel">✓ COVERED BY WARRANTY</div>
+        <ul class="policy-list">
+          <li data-i="policyCovered1">Dead-on-arrival login credentials or 2FA issues reported upon delivery</li>
+          <li data-i="policyCovered2">Pre-existing verification issues or initial KYC/KYB re-checks not caused by buyer store content</li>
+          <li data-i="policyCovered3">Unexpected lockouts while following the handover guidelines</li>
+        </ul>
+      </div>
+      <div class="policy-highlight">
+        <div class="policy-highlight-label excluded" data-i="policyExcludedLabel">✕ NOT COVERED</div>
+        <ul class="policy-list">
+          <li data-i="policyExcluded1">Prohibited or high-risk products, or customer chargebacks and disputes</li>
+          <li data-i="policyExcluded2">Mismatched or flagged IPs/VPNs, shared proxies, or compromised devices</li>
+          <li data-i="policyExcluded3">Changing core entity details immediately after login</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="accounts" class="policy-card">
+    <div class="policy-label" data-i="policyHandoverLabel">02 · ACCOUNT HANDOVER &amp; USAGE</div>
+    <h2 data-i="policyHandoverTitle">Handover &amp; Operational Guidelines</h2>
+    <ul class="policy-list">
+      <li><strong data-i="policyOwnershipLabel">Full Control at Delivery:</strong> <span data-i="policyOwnershipText">Every delivery includes primary login credentials, original verified email access, 2FA keys, and a step-by-step setup guide. Buyers must secure and update recovery credentials immediately upon verifying access.</span></li>
+      <li><strong data-i="policyEnvironmentLabel">Clean Environment Requirement:</strong> <span data-i="policyEnvironmentText">Buyers agree to use a clean, dedicated connection and isolated browser profile appropriate for their business and platform requirements. Restrictions caused by prohibited goods, unusual activity, or platform-policy violations are not covered by warranty.</span></li>
+      <li><strong data-i="policyProviderLabel">Independent Provider Notice:</strong> <span data-i="policyProviderText">Ledgerline is an independent e-commerce infrastructure provider and is not affiliated with, endorsed by, or sponsored by Stripe, Inc. or Shopify Inc.</span></li>
+    </ul>
+  </section>
+
+  <section id="privacy" class="policy-card">
+    <div class="policy-label" data-i="policyPrivacyLabel">03 · PRIVACY &amp; DISCRETION</div>
+    <h2 data-i="policyPrivacyTitle">Confidentiality Policy</h2>
+    <p data-i="policyPrivacyText">Orders, communications, and delivery records are handled confidentially through direct support channels. Ledgerline does not publicly disclose client store URLs, identities, or order details.</p>
+  </section>
+
+  <section class="policy-card policy-contact">
+    <div class="eyebrow" data-i="policySupportEyebrow">Questions Before Ordering?</div>
+    <h2 data-i="policySupportTitle">Confirm eligibility or inspect live client feedback.</h2>
+    <p data-i="policySupportText">Contact James on Telegram with your order reference, the relevant timestamp, and a clear screenshot or video of the dashboard status. You can also review buyer feedback in our community.</p>
+    <div class="policy-actions">
+      <a href="https://t.me/jamesaccounts" target="_blank" rel="noopener" class="primary" data-i="policyContactCta">Contact @jamesaccounts →</a>
+      <a href="feedbacks.html" class="secondary" data-i="policyFeedbackCta">View Customer Feedback</a>
+      <a href="https://t.me/buyshopifypayments" target="_blank" rel="noopener" class="secondary" data-i="policyCommunityCta">Join our community</a>
+    </div>
+  </section>
+</main>
+<footer class="site-footer"><div class="site-footer-inner">
+  <div class="site-footer-grid">
+    <div class="site-footer-about"><a class="site-footer-brand" href="/">Ledgerline</a><p data-i="footerDescription">Pre-verified and warmed Stripe and Shopify accounts for online businesses.</p></div>
+    <div class="site-footer-col"><h2 data-i="footerExplore">Explore</h2><ul class="site-footer-links"><li><a href="/#process" data-i="footerProcess">Process</a></li><li><a href="/#faq" data-i="footerFaq">FAQ</a></li><li><a href="blog.html" data-i="footerBlog">Blog</a></li><li><a href="/#start" data-i="footerContact">Contact</a></li></ul></div>
+    <div class="site-footer-col"><h2 data-i="footerCommunity">Community</h2><ul class="site-footer-links"><li><a href="feedbacks.html" data-i="footerFeedbacks">Feedbacks</a></li><li><a href="aboutus.html" data-i="footerAbout">About</a></li></ul></div>
+    <div class="site-footer-col"><h2 data-i="footerPolicies">Policies</h2><ul class="site-footer-links"><li><a href="policy.html" data-i="footerPoliciesLink">Policies</a></li><li><a href="refund.html" data-i="footerRefund">Refund policy</a></li></ul></div>
+  </div>
+  <div class="site-footer-bottom"><span data-i="footerCopyright">© 2026 Ledgerline</span><span data-i="footerDisclaimer">Not affiliated with Stripe or Shopify. Their names and marks belong to their respective owners.</span></div>
+</div></footer>
+<script src="site-locale.js"></script>
+<script>
+(function(){
+  var button=document.getElementById('theme'),mode=document.documentElement.getAttribute('data-mode')||'auto';
+  button.addEventListener('click',function(){
+    mode=mode==='auto'?'light':mode==='light'?'dark':'auto';
+    document.documentElement.setAttribute('data-mode',mode);
+    if(mode==='auto'){document.documentElement.removeAttribute('data-theme')}else{document.documentElement.setAttribute('data-theme',mode)}
+    try{mode==='auto'?localStorage.removeItem('thm'):localStorage.setItem('thm',mode)}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>

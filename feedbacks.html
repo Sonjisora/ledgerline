@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i="pageTitleFeedback">Customer Feedback — Ledgerline</title>
+<meta name="description" content="Customer-shared feedback screenshots from the Ledgerline community.">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<script>(function(){var m='auto',e=document.documentElement;try{m=localStorage.getItem('thm')||'auto'}catch(x){}var d=matchMedia('(prefers-color-scheme:dark)').matches;e.setAttribute('data-theme',m==='auto'?(d?'dark':'light'):m);e.setAttribute('data-mode',m)})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<style>
+:root{--bg:#fafaf7;--surface:#fff;--ink:#0e0f0c;--mute:#6b6d66;--line:#e6e6e0;--accent:#0e0f0c;--accent-ink:#fff;--soft:#f1f1ec;box-sizing:border-box}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0c0a;--surface:#131411;--ink:#f3f3ee;--mute:#9a9c94;--line:#24251f;--accent:#f3f3ee;--accent-ink:#0b0c0a;--soft:#1a1b17}}
+:root[data-theme="dark"]{--bg:#0b0c0a;--surface:#131411;--ink:#f3f3ee;--mute:#9a9c94;--line:#24251f;--accent:#f3f3ee;--accent-ink:#0b0c0a;--soft:#1a1b17}
+*{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Plus Jakarta Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{width:min(1120px,100%);margin:0 auto;padding:0 20px}
+.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.top-row{min-height:66px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:9px;color:var(--ink);text-decoration:none;font-size:19px;font-weight:800;white-space:nowrap}
+.brand-mark{width:24px;height:24px;border-radius:7px;background:var(--accent);position:relative}
+.brand-mark:after{content:"";position:absolute;left:6px;right:6px;top:11px;height:2px;background:var(--accent-ink);border-radius:2px}
+.desktop-nav{display:flex;align-items:center;gap:26px}
+.nav-link{color:var(--mute);text-decoration:none;font-size:14px;white-space:nowrap}
+.nav-link:hover,.nav-link[aria-current=page]{color:var(--ink)}
+.nav-link[aria-current=page]{pointer-events:none}
+.mobile-nav{display:none}
+.theme{width:38px;height:38px;border:1px solid var(--line);border-radius:50%;background:var(--surface);color:var(--ink);font:inherit;cursor:pointer}
+.main{max-width:1120px;margin:0 auto;padding:88px 20px 120px}
+.eyebrow{font:12px 'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.08em;color:var(--mute)}
+h1{font-size:clamp(34px,5vw,56px);letter-spacing:-.04em;line-height:1.05;margin:12px 0}
+.intro{max-width:680px;color:var(--mute);line-height:1.7}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));align-items:start;gap:16px;margin-top:32px}
+.gallery figure{margin:0;padding:10px;background:var(--surface);border:1px solid var(--line);border-radius:18px}
+.gallery img{width:100%;height:auto;display:block;border-radius:10px}
+.contact{display:inline-flex;margin-top:28px;padding:12px 20px;background:var(--accent);color:var(--accent-ink);border-radius:999px;font-weight:600;text-decoration:none}
+@media(max-width:767px){.wrap{padding-inline:16px}.desktop-nav{display:none}.mobile-nav{display:flex;gap:24px;overflow-x:auto;padding:0 16px 12px;border-top:1px solid var(--line);scrollbar-width:none}.mobile-nav::-webkit-scrollbar{display:none}.main{padding:64px 16px 96px}}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="Main navigation">
+  <div class="wrap top-row">
+    <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span>Ledgerline</a>
+    <div class="desktop-nav">
+      <a class="nav-link" href="/" data-i="navHome">Home</a>
+      <a class="nav-link" href="feedbacks.html" aria-current="page" data-i="navFeedbacks">Feedbacks</a>
+      <a class="nav-link" href="/#start" data-i="footerContact">Contact</a>
+    </div>
+    <div class="top-controls">
+      <select id="language" class="site-language" aria-label="Language"><option value="auto">Auto</option><option value="en">English</option><option value="fr">Français</option><option value="es">Español</option><option value="ar">العربية</option><option value="zh">中文</option></select>
+      <button class="theme" id="theme" type="button" aria-label="Change color theme" title="Auto, light, or dark theme"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 15.4A8.5 8.5 0 018.6 3.8 8.5 8.5 0 1020.2 15.4Z"/></svg></button>
+      <a class="site-header-cta" href="/#start" data-i="cta">Buy Account</a>
+    </div>
+  </div>
+  <div class="mobile-nav" aria-label="More navigation">
+    <a class="nav-link" href="/" data-i="navHome">Home</a>
+    <a class="nav-link" href="feedbacks.html" aria-current="page" data-i="navFeedbacks">Feedbacks</a>
+    <a class="nav-link" href="/#start" data-i="footerContact">Contact</a>
+  </div>
+</nav>
+<main class="main">
+  <div class="eyebrow" data-i="feedbackEyebrow">From the community</div>
+  <h1 data-i="feedbackTitle">Customer Feedback</h1>
+  <div class="gallery" aria-label="Customer feedback screenshots">
+    <figure><img src="photo_2026-09-30_22-03-21.jpg" alt="Customer feedback conversation screenshot" loading="lazy"></figure>
+    <figure><img src="photo_2026-09-30_23-33-55.jpg" alt="Customer feedback conversation screenshot" loading="lazy"></figure>
+    <figure><img src="photo_2026-10-01_01-22-27.jpg" alt="Customer feedback conversation screenshot" loading="lazy"></figure>
+    <figure><img src="photo_2026-10-01_02-10-23.jpg" alt="Customer feedback conversation screenshot" loading="lazy"></figure>
+    <figure><img src="photo_2026-10-01_07-58-29.jpg" alt="Customer feedback conversation screenshot" loading="lazy"></figure>
+    <figure><img src="photo_2026-10-01_11-42-25.jpg" alt="Customer feedback conversation screenshot" loading="lazy"></figure>
+    <figure><img src="photo_2026-10-01_14-17-41.jpg" alt="Customer feedback conversation screenshot" loading="lazy"></figure>
+    <figure><img src="photo_2026-10-01_23-30-09.jpg" alt="Customer feedback conversation screenshot" loading="lazy"></figure>
+    <figure><img src="photo_2026-10-02_10-50-25.jpg" alt="Customer feedback conversation screenshot" loading="lazy"></figure>
+    <figure><img src="photo_2026-10-02_23-36-06.jpg" alt="Customer feedback conversation screenshot" loading="lazy"></figure>
+    <figure><img src="photo_2026-10-03_05-08-58.jpg" alt="Customer feedback conversation screenshot" loading="lazy"></figure>
+    <figure><img src="photo_2026-10-03_05-59-16.jpg" alt="Customer feedback conversation screenshot" loading="lazy"></figure>
+    <figure><img src="photo_2026-11-17_10-31-11.jpg" alt="Customer feedback conversation screenshot" loading="lazy"></figure>
+  </div>
+  <a class="contact" href="https://t.me/buyshopifypayments?utm_source=google&utm_medium=ads&utm_campaign=ledgerline_p2p" data-i="telegramLink">Visit our Telegram community</a>
+</main>
+<footer class="site-footer"><div class="site-footer-inner">
+  <div class="site-footer-grid">
+    <div class="site-footer-about"><a class="site-footer-brand" href="/">Ledgerline</a><p data-i="footerDescription">Pre-verified and warmed Stripe and Shopify accounts for online businesses.</p></div>
+    <div class="site-footer-col"><h2 data-i="footerExplore">Explore</h2><ul class="site-footer-links"><li><a href="/#process" data-i="footerProcess">Process</a></li><li><a href="/#faq" data-i="footerFaq">FAQ</a></li><li><a href="blog.html" data-i="footerBlog">Blog</a></li><li><a href="/#start" data-i="footerContact">Contact</a></li></ul></div>
+    <div class="site-footer-col"><h2 data-i="footerCommunity">Community</h2><ul class="site-footer-links"><li><a href="feedbacks.html" data-i="footerFeedbacks">Feedbacks</a></li><li><a href="aboutus.html" data-i="footerAbout">About</a></li></ul></div>
+    <div class="site-footer-col"><h2 data-i="footerPolicies">Policies</h2><ul class="site-footer-links"><li><a href="policy.html" data-i="footerPoliciesLink">Policies</a></li><li><a href="refund.html" data-i="footerRefund">Refund policy</a></li></ul></div>
+  </div>
+  <div class="site-footer-bottom"><span data-i="footerCopyright">© 2026 Ledgerline</span><span data-i="footerDisclaimer">Not affiliated with Stripe or Shopify. Their names and marks belong to their respective owners.</span></div>
+</div></footer>
+<script>
+(function(){
+  var button=document.getElementById('theme'),mode=document.documentElement.getAttribute('data-mode')||'auto';
+  button.addEventListener('click',function(){
+    mode=mode==='auto'?'light':mode==='light'?'dark':'auto';
+    document.documentElement.setAttribute('data-mode',mode);
+    if(mode==='auto'){document.documentElement.removeAttribute('data-theme')}else{document.documentElement.setAttribute('data-theme',mode)}
+    try{mode==='auto'?localStorage.removeItem('thm'):localStorage.setItem('thm',mode)}catch(e){}
+  });
+})();
+</script>
+<script src="site-locale.js"></script>
+</body>
+</html>

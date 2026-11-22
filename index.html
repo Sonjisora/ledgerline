@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i="docTitle">Ledgerline — Pre-Verified & Warmed Stripe and Shopify Accounts</title>
+<meta name="description" content="Buy ready-to-use, pre-verified and warmed Stripe and Shopify accounts with KYC/KYB cleared, live payouts active, and up to a 30-day replacement warranty.">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<script>(function(){var m='auto',e=document.documentElement;try{m=localStorage.getItem('thm')||'auto'}catch(x){}var d=matchMedia('(prefers-color-scheme:dark)').matches;e.setAttribute('data-theme',m==='auto'?(d?'dark':'light'):m);e.setAttribute('data-mode',m)})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Noto fonts deferred - only load for AR/ZH -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<!-- Inlined Tailwind CSS utilities - removes ~100KB JIT runtime -->
+<style>
+[hidden]{display:none!important}
+:root{--bg:#fafaf7;--surface:#fff;--ink:#0e0f0c;--mute:#6b6d66;--line:#e6e6e0;--accent:#0e0f0c;--accent-ink:#fff;--ok:#1f9d55;--bad:#c2410c;--soft:#f1f1ec;--blue:#1a1f71;--pp:#003087;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0c0a;--surface:#131411;--ink:#f3f3ee;--mute:#9a9c94;--line:#24251f;--accent:#f3f3ee;--accent-ink:#0b0c0a;--ok:#3ecf7a;--bad:#fb923c;--soft:#1a1b17;--blue:#7f95ff;--pp:#6d9bf0}}
+:root[data-theme="dark"]{--bg:#0b0c0a;--surface:#131411;--ink:#f3f3ee;--mute:#9a9c94;--line:#24251f;--accent:#f3f3ee;--accent-ink:#0b0c0a;--ok:#3ecf7a;--bad:#fb923c;--soft:#1a1b17;--blue:#7f95ff;--pp:#6d9bf0}
+
+/* Inlined Tailwind utilities - generated to replace ~100KB CDN JIT */
+.flex{display:flex}.grid{display:grid}.items-center{align-items:center}.justify-between{justify-content:space-between}.justify-center{justify-content:center}
+.gap-1\.5{gap:.375rem}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-7{gap:1.75rem}.gap-9{gap:2.25rem}.gap-10{gap:2.5rem}.gap-12{gap:3rem}
+.gap-x-6{column-gap:1.5rem}.gap-y-2{row-gap:.5rem}
+.flex-wrap{flex-wrap:wrap}.relative{position:relative}.hidden{display:none}
+.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.font-extrabold{font-weight:800}
+@media(min-width:768px){.md\:flex{display:flex}.md\:grid-cols-2{grid-template-columns:1fr 1fr}.md\:grid-cols-3{grid-template-columns:repeat(3,1fr)}.md\:grid-cols-6{grid-template-columns:repeat(6,1fr)}.md\:col-span-2{grid-column:span 2}.md\:col-span-4{grid-column:span 4}}
+@media(min-width:1024px){.lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Fonts load only when the corresponding fallback is needed. */
+@font-face{font-family:'Noto Sans Arabic';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/notosansarabic/v30/OhS1MQkKdpTe0csKYJ0PBTw1gziN43ZQ.woff2) format('woff2')}
+@font-face{font-family:'Noto Sans SC';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/notosanssc/v30/KFOmCnqEu92Fr1MmSUqR6YcV.woff2) format('woff2')}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px)}
+body{background:var(--bg);color:var(--ink);font-family:'Plus Jakarta Sans','Noto Sans Arabic','Noto Sans SC',system-ui,sans-serif;margin:0;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .4s,color .4s}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+[dir=rtl] h1,[dir=rtl] h2,[dir=rtl] h3{letter-spacing:0!important}
+[dir=rtl] .arr{display:inline-block;transform:scaleX(-1)}
+.mono{font-family:'JetBrains Mono',monospace}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.hair{border:1px solid var(--line)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;transition:transform .5s cubic-bezier(.2,.9,.25,1.15),border-color .3s,background .4s}
+.card.h:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--ink) 30%,var(--line))}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--accent);color:var(--accent-ink);font-weight:600;font-size:14px;padding:12px 20px;border-radius:999px;border:0;cursor:pointer;text-decoration:none;white-space:nowrap;font-family:inherit;transition:transform .35s cubic-bezier(.2,.9,.25,1.4)}
+.btn:hover{transform:scale(1.04)}.btn:active{transform:scale(.97)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+h1,h2,h3{letter-spacing:-.03em;margin:0}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--line)}
+.ib{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:transform .4s cubic-bezier(.2,.9,.25,1.5)}
+.ib:hover{transform:rotate(18deg) scale(1.08)}
+#thm svg{display:none}[data-mode=auto] #thm .a,[data-mode=light] #thm .l,[data-mode=dark] #thm .d{display:block}
+#lang{width:auto;padding:8px 10px;border-radius:999px;font-size:13px;background:var(--surface)}
+.chk{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;cursor:pointer;background:var(--bg);transition:transform .3s cubic-bezier(.2,.9,.25,1.4),background .4s;user-select:none}
+.chk:hover{transform:translateY(-2px)}
+.box{width:20px;height:20px;border-radius:6px;border:1.5px solid var(--line);display:grid;place-items:center;flex:none;transition:all .3s cubic-bezier(.2,.9,.25,1.6)}
+.box svg{width:12px;height:12px;stroke:#fff;stroke-width:3;fill:none;stroke-dasharray:20;stroke-dashoffset:20;transition:stroke-dashoffset .35s ease .05s}
+.chk.on .box{background:var(--ok);border-color:var(--ok);transform:scale(1.1)}
+.chk.on .box svg{stroke-dashoffset:0}
+.bar{height:6px;background:var(--soft);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--ok);border-radius:99px;transition:width .6s cubic-bezier(.2,.8,.2,1)}
+@keyframes flt{50%{transform:translateY(-.8cqw)}}
+.lap{position:relative;container-type:inline-size;aspect-ratio:100/66;perspective:1500px}
+.rig{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateY(calc(-9deg + var(--rx,0deg))) rotateX(calc(3deg + var(--ry,0deg)));transition:transform .45s ease-out}
+.lid{position:absolute;left:5cqw;top:0;width:90cqw;aspect-ratio:16/10.4;background:#0a0a09;border-radius:2.6cqw 2.6cqw .8cqw .8cqw;padding:1.5cqw;box-shadow:0 0 0 1px #2d2e2a,0 5cqw 7cqw -3cqw rgba(0,0,0,.5)}
+.lid::before{content:"";position:absolute;top:0;left:50%;margin-left:-5.5cqw;width:11cqw;height:1.5cqw;background:#0a0a09;border-radius:0 0 1cqw 1cqw;z-index:3}
+.scr{position:relative;height:100%;border-radius:1.4cqw;background:var(--bg);overflow:hidden;display:flex;color:var(--ink);font-size:clamp(6px,1.8cqw,10px)}
+.base{position:absolute;left:0;top:58.4cqw;width:100cqw;height:2.4cqw;background:linear-gradient(#d9dad5,#8f908b);border-radius:0 0 3cqw 3cqw;box-shadow:0 2cqw 3cqw -1cqw rgba(0,0,0,.4)}
+.base::after{content:"";position:absolute;left:50%;margin-left:-7cqw;top:0;width:14cqw;height:.8cqw;background:rgba(0,0,0,.22);border-radius:0 0 1cqw 1cqw}
+.sb{width:17cqw;flex:none;border-inline-end:1px solid var(--line);padding:2cqw 1.3cqw;display:flex;flex-direction:column;gap:.7cqw}
+.sb .lgo{display:flex;align-items:center;gap:.9cqw;font-weight:800;font-size:clamp(7px,2cqw,11px);margin-bottom:1.4cqw}
+.sb .lgo i{width:2.6cqw;height:2.6cqw;border-radius:.8cqw;background:var(--accent);position:relative}
+.sb .lgo i::after{content:"";position:absolute;left:.6cqw;right:.6cqw;top:1.2cqw;height:.25cqw;background:var(--accent-ink)}
+.sb .it{padding:.9cqw 1.1cqw;border-radius:.9cqw;color:var(--mute);display:flex;gap:.9cqw;align-items:center;white-space:nowrap}
+.sb .it::before{content:"";width:1.3cqw;height:1.3cqw;border-radius:.4cqw;background:currentColor;opacity:.5}
+.sb .it.a{background:var(--soft);color:var(--ink);font-weight:600}
+.mn{flex:1;min-width:0;padding:2cqw 2cqw 0;display:flex;flex-direction:column;gap:1.3cqw}
+.mn h4{margin:0;font-size:clamp(9px,2.7cqw,15px);letter-spacing:-.02em}
+.mn p{margin:.3cqw 0 0;color:var(--mute);font-size:clamp(6px,1.6cqw,9px)}
+.kp{display:grid;grid-template-columns:repeat(3,1fr);gap:1cqw}
+.k{border:1px solid var(--line);border-radius:1.2cqw;padding:1cqw 1.3cqw;background:var(--surface)}
+.k small{display:block;color:var(--mute);font-size:clamp(5px,1.4cqw,8px)}
+.k b{font-size:clamp(7px,1.9cqw,10px);display:flex;align-items:center;gap:.6cqw}
+.k b::before{content:"";width:1cqw;height:1cqw;border-radius:50%;background:var(--ok)}
+.two{display:grid;grid-template-columns:1.6fr 1fr;gap:1.2cqw;flex:1;min-height:0}
+.rd{border:1px solid var(--line);border-radius:1.4cqw;background:var(--surface);padding:1.3cqw 1.5cqw}
+.hpc{border-radius:1.4cqw;background:var(--accent);color:var(--accent-ink);padding:1.5cqw;display:flex;flex-direction:column;gap:.9cqw}
+.hpc h5{margin:0;font-size:clamp(8px,2.2cqw,12px)}
+.hpc .r{background:color-mix(in srgb,var(--accent-ink) 14%,transparent);border-radius:1cqw;padding:1cqw;font-size:clamp(5px,1.5cqw,8px);line-height:1.35}
+.hpc #msg{color:inherit;opacity:.7;margin:auto 0 0!important;font-size:clamp(5px,1.4cqw,8px)!important}
+.scr .chk{padding:.8cqw 1.1cqw;gap:1cqw;border-radius:1cqw;margin-top:.7cqw;background:var(--bg);font-size:clamp(6px,1.6cqw,9px);font-weight:600}
+.scr .box{width:1.9cqw;height:1.9cqw;border-radius:.6cqw}.scr .box svg{width:1.1cqw;height:1.1cqw}
+.scr .bar{height:.7cqw;margin-top:.9cqw}
+.dock{position:absolute;left:50%;top:45cqw;display:flex;gap:1cqw;padding:1.3cqw 1.6cqw;border-radius:3.6cqw;background:color-mix(in srgb,var(--surface) 66%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid color-mix(in srgb,var(--line) 70%,transparent);box-shadow:0 2cqw 4cqw -1cqw rgba(0,0,0,.4);transform:translateX(-50%) translateZ(3cqw);z-index:5}
+.di{width:8cqw;height:8cqw;border-radius:24%;display:grid;place-items:center;flex:none;overflow:hidden;cursor:pointer;transform-origin:50% 100%;transition:transform .5s cubic-bezier(.2,.9,.25,1.5);box-shadow:0 .6cqw 1.2cqw rgba(0,0,0,.18)}
+.di svg{width:100%;height:100%;display:block}
+.di b{font-weight:800;line-height:1;letter-spacing:-.04em}
+.di.on{transform:translateY(-1.5cqw) scale(1.32)}.di.nb{transform:translateY(-.5cqw) scale(1.12)}
+.tip{position:absolute;bottom:calc(100% + 3cqw);transform:translateX(-50%);background:var(--surface);border:1px solid var(--line);padding:.9cqw 2.2cqw;border-radius:1.6cqw;font-size:clamp(9px,2.5cqw,13px);font-weight:600;white-space:nowrap;transition:left .5s cubic-bezier(.2,.9,.25,1.2);box-shadow:0 1cqw 2cqw -.6cqw rgba(0,0,0,.3);pointer-events:none}
+.cur{position:absolute;width:3.4cqw;height:3.4cqw;transition:left .5s cubic-bezier(.2,.9,.25,1.2),top .5s cubic-bezier(.2,.9,.25,1.2);pointer-events:none;z-index:2;filter:drop-shadow(0 .4cqw .6cqw rgba(0,0,0,.4))}
+.hc{margin:-52px 14px 0;position:relative;z-index:2;padding:20px;box-shadow:0 20px 40px -24px rgba(0,0,0,.35)}
+.step{position:relative;padding-inline-start:56px;cursor:pointer}
+.step .n{position:absolute;inset-inline-start:0;top:0;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;font-family:'JetBrains Mono',monospace;font-size:13px;background:var(--surface);transition:all .4s}
+.step.act .n{background:var(--accent);color:var(--accent-ink);transform:scale(1.1)}
+.step .d{max-height:0;overflow:hidden;opacity:0;transition:max-height .5s ease,opacity .5s}
+.step.act .d{max-height:220px;opacity:1}
+.step::before{content:"";position:absolute;inset-inline-start:19.5px;top:44px;bottom:-28px;width:1px;background:var(--line)}
+.step:last-child::before{display:none}
+input,select{width:100%;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:13px 14px;font:inherit;font-size:16px;outline:none;transition:border-color .2s,box-shadow .2s}
+input:focus,select:focus{border-color:var(--ink);box-shadow:0 0 0 3px color-mix(in srgb,var(--ink) 10%,transparent)}
+label>span{display:block;font-size:12px;color:var(--mute);margin-bottom:6px;font-weight:500}
+.chip{padding:11px 14px;border:1px solid var(--line);border-radius:12px;background:var(--bg);cursor:pointer;font:inherit;font-size:14px;font-weight:600;color:var(--ink);text-align:start;transition:transform .3s cubic-bezier(.2,.9,.25,1.4),background .25s,color .25s}
+.chip:hover{transform:translateY(-2px)}
+.chip.sel{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.lg{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:20px;letter-spacing:-.02em;white-space:nowrap;opacity:.9;transition:opacity .2s,transform .3s}
+.lg:hover{opacity:1;transform:translateY(-2px)}
+.pill{padding:3px 10px;border-radius:7px;font-size:15px;font-weight:800}
+.mq{overflow:hidden;direction:ltr;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.mt{display:flex;width:max-content;animation:mq 34s linear infinite}
+.mt:hover{animation-play-state:paused}
+.mt>div{display:flex;gap:44px;padding-inline-end:44px;align-items:center}
+@keyframes mq{to{transform:translateX(-50%)}}
+.grid-bg{background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse at 50% 0,#000 20%,transparent 70%);mask-image:radial-gradient(ellipse at 50% 0,#000 20%,transparent 70%);opacity:.5}
+.ring{--p:0;width:92px;height:92px;border-radius:50%;background:conic-gradient(var(--ok) calc(var(--p)*1%),var(--soft) 0);display:grid;place-items:center;transition:background .6s}
+.ring b{width:72px;height:72px;border-radius:50%;background:var(--surface);display:grid;place-items:center;font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:500}
+details.fq{border-bottom:1px solid var(--line);padding:18px 0}
+details.fq summary{cursor:pointer;font-weight:600;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+details.fq summary::-webkit-details-marker{display:none}
+details.fq summary::after{content:"+";font-family:'JetBrains Mono',monospace;transition:transform .3s}
+details.fq[open] summary::after{transform:rotate(45deg)}
+details.fq p{color:var(--mute);line-height:1.65;margin:10px 0 0}
+.cmp li{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:1.5;list-style:none}
+.cmp{margin:0;padding:0}
+#dock{position:fixed;inset-inline:0;bottom:0;z-index:55;display:flex;gap:10px;align-items:center;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .5s cubic-bezier(.2,.9,.25,1.1)}
+#dock.show{transform:none}
+#dock .btn{flex:1}
+.fab{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;flex:none;transition:transform .35s cubic-bezier(.2,.9,.25,1.5)}
+.fab:hover{transform:scale(1.1)}
+.nav-link{color:inherit;text-decoration:none;white-space:nowrap}
+.nav-mobile{display:none}
+@media (min-width:768px){#dock{inset-inline:auto;inset-inline-end:20px;bottom:20px;padding:0;background:none;border:0;backdrop-filter:none;flex-direction:column}#dock .btn{display:none}}
+@media (max-width:767px){.nav-mobile{display:flex;gap:22px;overflow-x:auto;padding:0 16px 12px;scrollbar-width:none;border-top:1px solid var(--line);font-size:13px;color:var(--mute)}.nav-mobile::-webkit-scrollbar{display:none}}
+#xm{position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.5);display:none;place-items:center;padding:20px}
+#xm.show{display:grid}
+#xm .card{box-sizing:border-box;width:min(420px,100%);min-width:0}
+#xm #xb{box-sizing:border-box;max-width:100%;padding-inline:12px;white-space:normal}
+#xm #xb span{min-width:0;overflow-wrap:anywhere;text-align:center}
+@media (max-width:640px){#xm .card{padding:22px!important}#xm #xb{gap:6px;padding:11px 8px;font-size:clamp(12px,3.6vw,14px)}}
+@media (max-width:640px){.wrap{padding:0 16px}.nav-cta{display:none}header#top{padding:36px 0 32px!important}section.s{padding:64px 0!important}.stats{gap:22px!important}.pc{padding:22px!important}.pc h3{margin-top:36px!important}#brand{display:none}.hc{margin:-40px 10px 0}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="stripe" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="#635BFF"/><path fill="#fff" d="M14.6 12.4c0-.7.6-1 1.5-1 1.4 0 3.1.4 4.5 1.2V8.5c-1.500-.6-3-.8-4.500-.8-3.700 0-6.100 1.900-6.100 5.200 0 5.100 7 4.300 7 6.500 0 .8-.7 1.100-1.700 1.100-1.500 0-3.400-.6-4.900-1.400v4c1.700.7 3.300 1 4.900 1 3.800 0 6.400-1.900 6.400-5.200 0-5.500-7.100-4.500-7.100-6.500z"/></symbol>
+<symbol id="shopify" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="#95BF47"/><path fill="#fff" d="M9.500 12.500h13l1 11.500H8.500l1-11.500z"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" d="M12.500 14.500V11a3.500 3.500 0 017 0v3.500"/><path fill="#5E8E3E" d="M16 17.200c-1.300 0-2.100.8-2.100 1.700 0 1.900 2.700 1.500 2.700 2.600 0 .4-.4.600-.9.600-.7 0-1.400-.3-1.800-.7l-.4 1.100c.5.400 1.300.7 2.200.7 1.400 0 2.300-.8 2.300-1.800 0-2-2.700-1.600-2.700-2.600 0-.3.300-.5.700-.5.600 0 1.100.2 1.500.5l.4-1.100c-.4-.3-1.100-.5-1.900-.5z"/></symbol>
+<symbol id="wa" viewBox="0 0 24 24"><path fill="#fff" d="M12 3a9 9 0 00-7.700 13.600L3 21l4.500-1.200A9 9 0 1012 3zm4.500 12.300c-.2.600-1.100 1.100-1.600 1.100-.4.100-.9.100-2.900-.7-2.500-1.100-4.100-3.600-4.200-3.800-.1-.2-1-1.300-1-2.500s.6-1.800.9-2c.2-.2.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 1.900c.1.200.1.400 0 .5l-.4.600c-.1.200-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.100.5.100.6-.1l.8-1c.2-.3.400-.2.600-.1l1.800.9c.3.100.5.200.5.300.1.200.1.800-.2 1.500z"/></symbol>
+<symbol id="tg" viewBox="0 0 24 24"><path fill="#fff" d="M20.700 4.300L3.400 11c-.9.400-.9 1 0 1.300l4.400 1.400 1.700 5.200c.2.600.4.800.9.800.4 0 .6-.2.900-.4l2.200-2.100 4.500 3.300c.8.500 1.400.2 1.700-.8l3-14.100c.3-1.200-.5-1.700-1.400-1.300zM9.200 13.300l9.100-5.700c.4-.3.800-.1.500.2l-7.500 6.800-.3 3.100-1.800-4.400z"/></symbol>
+</defs></svg>
+
+<nav class="top" aria-label="Main navigation"><div class="wrap flex items-center justify-between gap-2" style="height:62px">
+  <a href="#top" class="flex items-center gap-2 font-extrabold text-lg" style="letter-spacing:-.03em;color:var(--ink);text-decoration:none">
+    <span style="width:24px;height:24px;border-radius:7px;background:var(--accent);display:inline-block;position:relative"><span style="position:absolute;left:6px;right:6px;top:11px;height:2px;background:var(--accent-ink);border-radius:2px"></span></span><span id="brand">Ledgerline</span></a>
+  <div class="hidden md:flex items-center gap-7 text-sm" style="color:var(--mute)">
+    <a href="/#top" class="nav-link" data-i="navHome">Home</a>
+    <a href="feedbacks.html" class="nav-link" data-i="navFeedbacks">Feedbacks</a>
+    <a href="#start" class="nav-link" data-i="footerContact">Contact</a>
+  </div>
+  <div class="flex items-center gap-2">
+    <select id="lang" aria-label="Language"><option value="auto">Auto</option><option value="en">English</option><option value="fr">Français</option><option value="es">Español</option><option value="ar">العربية</option><option value="zh">中文</option></select>
+    <button class="ib" id="thm" aria-label="Theme" title="Auto / Light / Dark">
+      <svg class="a" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+      <svg class="l" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.900 4.900l1.400 1.400M17.700 17.700l1.400 1.400M2 12h2M20 12h2M4.900 19.100l1.400-1.400M17.700 6.300l1.400-1.400"/></svg>
+      <svg class="d" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.800A9 9 0 1111.200 3a7 7 0 009.800 9.800z"/></svg>
+    </button>
+    <a href="#start" class="btn nav-cta"><span data-i="cta">Buy Account</span></a>
+  </div>
+</div><div class="nav-mobile wrap" aria-label="More navigation">
+  <a href="/#top" class="nav-link" data-i="navHome">Home</a>
+  <a href="feedbacks.html" class="nav-link" data-i="navFeedbacks">Feedbacks</a>
+  <a href="#start" class="nav-link" data-i="footerContact">Contact</a>
+</div></nav>
+
+<header id="top" class="relative" style="padding:64px 0 56px">
+  <div class="grid-bg" style="position:absolute;inset:0;pointer-events:none"></div>
+  <div class="wrap relative grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <div class="rv inline-flex items-center gap-3 hair" style="padding:6px 14px 6px 8px;border-radius:99px;background:var(--surface)">
+        <span class="flex"><svg width="22" height="22"><use href="#stripe"/></svg><img class="shopify-theme-logo" alt="Shopify" width="78" height="22" style="object-fit:contain;margin-inline-start:-2px"></span>
+        <span class="mono" data-i="bd" style="font-size:12px;color:var(--mute)">Verified Stripe + Shopify Accounts</span>
+      </div>
+      <h1 class="rv" data-i="h1" style="font-size:clamp(34px,4.6vw,60px);line-height:1.05;font-weight:800;margin-top:22px;transition-delay:.08s">Pre-verified & warmed Stripe and Shopify accounts.</h1>
+      <p class="rv" data-i="sub" style="color:var(--mute);font-size:17px;line-height:1.65;margin-top:20px;max-width:490px;transition-delay:.16s">We provide pre-verified, warmed Stripe and Shopify accounts — KYC and KYB cleared, payments and payouts active — ready to launch from day one.</p>
+      <div class="rv flex flex-wrap items-center gap-3" style="margin-top:28px;transition-delay:.24s">
+        <a href="#start" class="btn"><span data-i="cta">Buy Account</span><span class="arr">→</span></a>
+        <a href="#quiz" class="btn ghost" data-i="b2">Find my package</a>
+      </div>
+      <div class="rv flex flex-wrap gap-x-6 gap-y-2 mono" style="margin-top:26px;font-size:12px;color:var(--mute);transition-delay:.3s">
+        <span>✓ <span data-i="mt1">Up to 30-day warranty</span></span><span>✓ <span data-i="mt2">Same-day delivery</span></span><span>✓ <span data-i="mt3">Full login & 2FA handover</span></span>
+      </div>
+    </div>
+    <div class="rv" style="transition-delay:.2s">
+      <div class="lap" id="lap" role="img" aria-label="Laptop showing a payments readiness dashboard, with a dock of Shopify, PayPal, Wise, Stripe, Revolut, Mastercard and Klarna icons">
+        <div class="rig">
+          <div class="lid"><div class="scr">
+            <aside class="sb"><div class="lgo"><i></i>Ledgerline</div><div class="it a">Dashboard</div><div class="it">Payments</div><div class="it">Readiness</div><div class="it">Documents</div><div class="it">Support</div></aside>
+            <div class="mn">
+              <div><h4 data-i="dh">Hello, founder</h4><p data-i="ds">Account warmed, verified & ready for payouts.</p></div>
+              <div class="kp"><div class="k"><small>Store</small><b>Active</b></div><div class="k"><small>Stripe</small><b>Verified</b></div><div class="k"><small>Next payout</small><b>Tue</b></div></div>
+              <div class="two">
+                <div class="rd"><div class="flex items-center justify-between"><span class="eyebrow" data-i="mr" style="font-size:clamp(5px,1.4cqw,8px)">Account status</span><span class="mono" id="pct">25%</span></div><div class="bar"><i id="fill" style="width:25%"></i></div>
+                  <div class="chk on"><span class="box"><svg viewBox="0 0 12 12"><path d="M2 6.500l2.500 2.500L10 3.500"/></svg></span><span data-i="c1">KYC & KYB fully verified</span></div><div class="chk"><span class="box"><svg viewBox="0 0 12 12"><path d="M2 6.500l2.500 2.500L10 3.500"/></svg></span><span data-i="c2">Warmed transaction history</span></div><div class="chk"><span class="box"><svg viewBox="0 0 12 12"><path d="M2 6.500l2.500 2.500L10 3.500"/></svg></span><span data-i="c3">Live payouts enabled</span></div><div class="chk"><span class="box"><svg viewBox="0 0 12 12"><path d="M2 6.500l2.500 2.500L10 3.500"/></svg></span><span data-i="c4">30-day replacement warranty</span></div></div>
+                <div class="hpc"><h5 data-i="hp">Need help?</h5><div class="r" data-i="hp2">I wanna Buy Shopify Account</div><div class="mono" id="msg" data-i="m0">Included with every account handover.</div></div>
+              </div>
+            </div>
+          </div></div>
+          <div class="base"></div>
+          <div class="dock" id="dk">
+            <div class="di"><img src="https://cdn.brandfetch.io/idAgPm7IvG/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B" style="width:100%;height:100%;object-fit:contain;padding:2px"></div>
+            <div class="di"><img src="https://cdn.brandfetch.io/id-Wd4a4TS/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B" style="width:100%;height:100%;object-fit:contain;padding:2px"></div>
+            <div class="di" style="background:#9FE870"><b style="font-size:2.6cqw;color:#163300">wise</b></div>
+            <div class="di"><svg><use href="#stripe"/></svg></div>
+            <div class="di" style="background:#0e0f0c;border:1px solid #3a3b37"><b style="font-size:4.8cqw;color:#fff">R</b></div>
+            <div class="di" style="background:#fff"><svg viewBox="0 0 34 22" style="width:78%"><circle cx="11" cy="11" r="10" fill="#EB001B"/><circle cx="23" cy="11" r="10" fill="#F79E1B" fill-opacity=".9"/></svg></div>
+            <div class="di" style="background:#FFB3C7"><b style="font-size:4.6cqw;color:#0e0f0c">K</b></div>
+            <div class="tip" id="tip">Stripe</div>
+            <svg class="cur" id="dcur" viewBox="0 0 24 24"><path d="M5 3l14 8-6 2 4 7-3 1.500-4-7-5 4z" fill="#fff" stroke="#000" stroke-width="1.500" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section style="padding:28px 0 24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="flex flex-wrap items-center justify-between gap-6">
+      <div class="flex items-center gap-7">
+        <span class="lg"><svg width="30" height="30"><use href="#stripe"/></svg>Stripe</span>
+        <span class="lg"><img class="shopify-theme-logo" alt="Shopify" width="100" height="30" style="object-fit:contain"></span>
+      </div>
+      <div class="stats flex flex-wrap gap-9">
+        <div><div class="mono" data-count="3000" data-suffix="K+" style="font-size:24px">0</div><div data-i="st1" style="font-size:12px;color:var(--mute)">Accounts sold</div></div>
+        <div><div class="mono" data-range-count="60" style="font-size:24px">0 min</div><div data-i="st2" style="font-size:12px;color:var(--mute)">Average delivery time</div></div>
+        <div><div class="mono" data-count="75" data-suffix="+ " style="font-size:24px">0</div><div data-i="st3" style="font-size:12px;color:var(--mute)">Countries supported</div></div>
+      </div>
+    </div>
+    <div class="eyebrow" data-i="lgl" style="margin:28px 0 14px">Payment methods & platforms we work with</div>
+    <div class="mq"><div class="mt" id="mt"></div></div>
+  </div>
+</section>
+
+<section id="pillars" class="s" style="padding:96px 0">
+  <div class="wrap">
+    <div class="rv eyebrow" data-i="pe">What’s included</div>
+    <h2 class="rv" data-i="ph" style="font-size:clamp(28px,4vw,44px);font-weight:800;margin-top:12px;max-width:620px">Everything between “order” and “first live payout.”</h2>
+    <div class="grid md:grid-cols-6 gap-4" style="margin-top:40px">
+      <div class="rv card h pc md:col-span-4" style="padding:30px;min-height:250px"><div class="flex gap-2"><svg width="28" height="28"><use href="#stripe"/></svg><img class="shopify-theme-logo" alt="Shopify" width="94" height="28" style="object-fit:contain"></div>
+        <h3 data-i="p1t" style="font-size:24px;font-weight:700;margin-top:52px">Pre-verified & warmed Stripe and Shopify accounts</h3><p data-i="p1d" style="color:var(--mute);line-height:1.6;margin-top:10px;max-width:460px">KYC and KYB cleared with live card processing and payouts active—delivered ready to connect to your store with full login, email, and 2FA control.</p></div>
+      <div class="rv card h pc md:col-span-2" style="padding:30px;transition-delay:.08s"><div class="mono" data-i="p2s" style="font-size:12px;color:var(--ok)">● 30-day warranty</div>
+        <h3 data-i="p2t" style="font-size:20px;font-weight:700;margin-top:52px">Up to 30-day replacement warranty</h3><p data-i="p2d" style="color:var(--mute);line-height:1.6;margin-top:10px;font-size:14px">Every account is backed by up to 30 days of replacement coverage against initial verification holds or unexpected lockouts.</p></div>
+      <div class="rv card h pc md:col-span-2" style="padding:30px"><div class="mono" id="cur" style="font-size:12px;color:var(--mute)">USD · EUR · GBP</div>
+        <h3 data-i="p3t" style="font-size:20px;font-weight:700;margin-top:52px">Multi-currency & instant payout routing</h3><p data-i="p3d" style="color:var(--mute);line-height:1.6;margin-top:10px;font-size:14px">US, UK, and EU verified entities ready for fast bank/IBAN settlements across your target markets.</p></div>
+      <div class="rv card h pc md:col-span-4" style="padding:30px;transition-delay:.08s"><div class="flex items-center gap-3 mono" style="font-size:12px;color:var(--mute)"><span style="width:8px;height:8px;border-radius:50%;background:var(--ok)"></span><span data-i="p4s">Same-day handover</span></div>
+        <h3 data-i="p4t" style="font-size:24px;font-weight:700;margin-top:52px">Warming history & safe handover guide</h3><p data-i="p4d" style="color:var(--mute);line-height:1.6;margin-top:10px;max-width:460px">Pre-warmed with clean baseline activity and delivered with a step-by-step IP/proxy setup guide so you can scale smoothly from day one.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="s" style="padding:24px 0 96px">
+  <div class="wrap">
+    <div class="rv eyebrow" data-i="be">Before / after</div>
+    <h2 class="rv" data-i="bh" style="font-size:clamp(28px,4vw,44px);font-weight:800;margin-top:12px;max-width:620px">Cold new applications vs. pre-verified & warmed.</h2>
+    <div class="grid md:grid-cols-2 gap-4" style="margin-top:36px">
+      <div class="rv card" style="padding:26px"><div class="mono" data-i="bt" style="font-size:12px;color:var(--mute)">Weeks waiting on KYC/KYB reviews</div>
+        <ul class="cmp" style="margin-top:12px"><li><b style="color:var(--bad)">✕</b><span data-i="b1">Instant holds on your very first orders</span></li><li><b style="color:var(--bad)">✕</b><span data-i="b2x">Cold accounts flagged by risk filters</span></li><li><b style="color:var(--bad)">✕</b><span data-i="b3">Zero protection if an account gets limited</span></li><li><b style="color:var(--bad)">✕</b><span data-i="b4">No warranty coverage</span></li></ul></div>
+      <div class="rv card" style="padding:26px;transition-delay:.1s"><div class="mono" data-i="at" style="font-size:12px;color:var(--ok)">KYC & KYB already approved and verified</div>
+        <ul class="cmp" style="margin-top:12px"><li><b style="color:var(--ok)">✓</b><span data-i="a1">KYC & KYB already approved and verified</span></li><li><b style="color:var(--ok)">✓</b><span data-i="a2">Warmed history for smoother volume scaling</span></li><li><b style="color:var(--ok)">✓</b><span data-i="a3">Payments and payouts active immediately</span></li><li><b style="color:var(--ok)">✓</b><span data-i="a4">Up to 30-day warranty included</span></li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="quiz" class="s" style="padding:96px 0;background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap grid lg:grid-cols-2 gap-10 items-center">
+    <div><div class="rv eyebrow" data-i="qze">Free tool</div>
+      <h2 class="rv" data-i="qzh" style="font-size:clamp(28px,4vw,44px);font-weight:800;margin-top:12px">Match your store to the right account package in 30 seconds.</h2>
+      <p class="rv" data-i="qzs" style="color:var(--mute);line-height:1.6;margin-top:14px">Answer 5 quick questions and see your gaps.</p></div>
+    <div class="rv card" style="padding:26px;min-height:300px" id="qz"></div>
+  </div>
+</section>
+
+<section id="process" class="s" style="padding:96px 0">
+  <div class="wrap grid lg:grid-cols-2 gap-12">
+    <div><div class="rv eyebrow" data-i="qe">Process</div>
+      <h2 class="rv" data-i="qh" style="font-size:clamp(28px,4vw,44px);font-weight:800;margin-top:12px">Three steps to live, stable processing.</h2>
+      <p class="rv" data-i="qs" style="color:var(--mute);line-height:1.6;margin-top:14px">Click a step to see what happens inside it.</p></div>
+    <div class="grid gap-9">
+      <div class="rv step act"><span class="n">01</span><h3 data-i="t1t" style="font-size:20px;font-weight:700">Choose Package</h3><div class="d"><p data-i="t1d" style="color:var(--mute);line-height:1.6;margin-top:8px">Pick your platform (Stripe, Shopify, or bundle), entity region (US, UK, EU), and warranty tier up to 30 days.</p></div></div>
+      <div class="rv step"><span class="n">02</span><h3 data-i="t2t" style="font-size:20px;font-weight:700">Fast Handover</h3><div class="d"><p data-i="t2d" style="color:var(--mute);line-height:1.6;margin-top:8px">Receive full login credentials, original verified email, 2FA keys, and a clean IP/proxy guide within 30–60 minutes.</p></div></div>
+      <div class="rv step"><span class="n">03</span><h3 data-i="t3t" style="font-size:20px;font-weight:700">Connect & Process</h3><div class="d"><p data-i="t3d" style="color:var(--mute);line-height:1.6;margin-top:8px">Link your store, route payouts to your bank/IBAN, and accept live card payments immediately.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="proof" class="s" hidden style="padding:0 0 96px">
+  <div class="wrap"><div class="eyebrow" data-i="pre">Results</div>
+    <div class="grid md:grid-cols-3 gap-4" style="margin-top:20px">
+      <div class="card" style="padding:24px"><p style="line-height:1.6">“[Client quote]”</p><div class="mono" style="font-size:12px;color:var(--mute);margin-top:14px">[Name] · [Store]</div></div>
+      <div class="card" style="padding:24px"><p style="line-height:1.6">“[Client quote]”</p><div class="mono" style="font-size:12px;color:var(--mute);margin-top:14px">[Name] · [Store]</div></div>
+      <div class="card" style="padding:24px"><p style="line-height:1.6">“[Client quote]”</p><div class="mono" style="font-size:12px;color:var(--mute);margin-top:14px">[Name] · [Store]</div></div>
+    </div></div>
+</section>
+
+<section id="faq" class="s" style="padding:0 0 96px">
+  <div class="wrap" style="max-width:760px">
+    <div class="rv eyebrow" data-i="fqe">FAQ</div>
+    <h2 class="rv" data-i="fqh" style="font-size:clamp(28px,4vw,44px);font-weight:800;margin:12px 0 24px">Questions founders ask first.</h2>
+    <div class="rv">
+      <details class="fq" open><summary data-i="fq1">What is included with each account?</summary><p data-i="fa1">Full account access, original verified email, 2FA keys, KYC/KYB verification status, and a clean handover guide.</p></details>
+      <details class="fq"><summary data-i="fq2">How does the 30-day warranty work?</summary><p data-i="fa2">If an account experiences an unexpected verification lockout or restriction within the warranty window (up to 30 days) while following our usage guidelines, we replace it.</p></details>
+      <details class="fq"><summary data-i="fq3">Are the accounts warmed before delivery?</summary><p data-i="fa3">Yes. Accounts are aged and warmed with clean baseline activity so they don't trigger immediate new-account risk flags.</p></details>
+      <details class="fq"><summary data-i="fq4">How fast is delivery?</summary><p data-i="fa4">In-stock US, UK, and EU accounts are delivered within a few hours of order confirmation.</p></details>
+      <details class="fq"><summary data-i="fq5">Do I get full ownership and payout control?</summary><p data-i="fa5">Yes. Once handed over, you update the security credentials and route payouts directly to your own bank or IBAN.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="start" class="s" style="padding:96px 0;background:var(--soft);border-top:1px solid var(--line)">
+  <div class="wrap" style="max-width:640px">
+    <div class="rv eyebrow" data-i="fe">Buy Account</div>
+    <h2 class="rv" data-i="fh" style="font-size:clamp(28px,4vw,44px);font-weight:800;margin-top:12px">Order your verified account.</h2>
+    <p class="rv" data-i="fs" style="color:var(--mute);margin-top:12px;line-height:1.6">Select your package below and message us directly—we reply within minutes with live stock and payment details.</p>
+    <form id="lead" class="rv card" style="padding:24px;margin-top:30px">
+      <div class="mono" id="stp" style="font-size:12px;color:var(--mute);margin-bottom:14px"></div>
+      <div id="s1" class="grid gap-3">
+        <div style="font-weight:600"><span data-i="fo">Which account package do you need?</span></div>
+        <button type="button" class="chip" data-t="o1"><span data-i="o1">Verified Stripe Account</span></button>
+        <button type="button" class="chip" data-t="o2"><span data-i="o2">Verified Shopify Store + Payments</span></button>
+        <button type="button" class="chip" data-t="o3"><span data-i="o3">Full Bundle (Stripe + Shopify + 30-Day Warranty)</span></button>
+      </div>
+      <div id="s2" class="grid gap-4" hidden>
+        <label><span data-i="fn">Name</span><input name="name" required autocomplete="name"></label>
+        <label><span>Telegram / WhatsApp</span><input name="handle" placeholder="@handle / +212…"></label>
+        <label><span data-i="fv">Expected monthly volume</span><select name="vol"><option>&lt; $10k</option><option>$10k – $50k</option><option>$50k – $250k</option><option>$250k+</option></select></label>
+        <div class="flex gap-3"><button type="button" class="btn ghost" id="back" data-i="bkb">Back</button><button class="btn" type="submit" style="flex:1"><span data-i="sb">Order Now</span><span class="arr">→</span></button></div>
+      </div>
+      <div id="ok" class="mono" style="display:none;font-size:13px;margin-top:14px"></div>
+    </form>
+    <div class="flex flex-wrap gap-x-6 gap-y-2 mono" style="margin-top:18px;font-size:12px;color:var(--mute)"><span>✓ <span data-i="mt1">Up to 30-day warranty</span></span><span>✓ <span data-i="mt2">Same-day delivery</span></span><span>✓ <span data-i="mt3">Full login & 2FA handover</span></span></div>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="site-footer-inner">
+  <div class="site-footer-grid">
+    <div class="site-footer-about"><a class="site-footer-brand" href="/#top">Ledgerline</a><p data-i="footerDescription">Pre-verified and warmed Stripe and Shopify accounts for online businesses.</p></div>
+    <div class="site-footer-col"><h2 data-i="footerExplore">Explore</h2><ul class="site-footer-links"><li><a href="/#pillars" data-i="footerIncluded">What’s included</a></li><li><a href="/#process" data-i="footerProcess">Process</a></li><li><a href="/#faq" data-i="footerFaq">FAQ</a></li><li><a href="/#start" data-i="footerContact">Contact</a></li><li><a href="blog.html" data-i="footerBlog">Blog</a></li></ul></div>
+    <div class="site-footer-col"><h2 data-i="footerCommunity">Community</h2><ul class="site-footer-links"><li><a href="feedbacks.html" data-i="footerFeedbacks">Feedbacks</a></li><li><a href="aboutus.html" data-i="footerAbout">About</a></li></ul></div>
+    <div class="site-footer-col"><h2 data-i="footerPolicies">Policies</h2><ul class="site-footer-links"><li><a href="policy.html" data-i="footerPoliciesLink">Policies</a></li><li><a href="refund.html" data-i="footerRefund">Refund policy</a></li></ul></div>
+  </div>
+  <div class="site-footer-bottom"><span data-i="ft1">© 2026 Ledgerline. Verified e-commerce payment infrastructure.</span><span data-i="footerDisclaimer">Not affiliated with Stripe or Shopify. Their names and marks belong to their respective owners.</span></div>
+</div></footer>
+
+<div id="dock"><a href="#start" class="btn"><span data-i="cta">Buy Account</span></a>
+  <a class="fab" id="fwa" href="https://wa.me/12542755458?utm_source=google&utm_medium=ads&utm_campaign=ledgerline_p2p" style="background:#25D366" aria-label="WhatsApp" target="_blank" rel="noopener"><svg width="26" height="26"><use href="#wa"/></svg></a>
+  <a class="fab" id="ftg" href="https://t.me/jamesaccounts?utm_source=google&utm_medium=ads&utm_campaign=ledgerline_p2p" style="background:#229ED9" aria-label="Telegram Direct" target="_blank" rel="noopener"><svg width="24" height="24"><use href="#tg"/></svg></a></div>
+
+<div id="xm"><div class="card" style="max-width:420px;padding:28px;position:relative">
+  <div class="inline-flex items-center gap-2 mono" style="font-size:12px;color:var(--ok);margin-bottom:10px">● LIVE STOCK &amp; PROOFS</div>
+  <h3 data-i="xh" style="font-size:24px;font-weight:800">Before you go — check our live proofs &amp; stock</h3>
+  <p data-i="xp" style="color:var(--mute);line-height:1.6;margin:10px 0 20px">Join our Telegram channel to browse available accounts, verified <b>#feedbacks</b> from past deals, and <b>#scammers</b> we expose.</p>
+  <a class="btn" href="https://t.me/buyshopifypayments?utm_source=google&amp;utm_medium=ads&amp;utm_campaign=ledgerline_p2p" target="_blank" rel="noopener" style="width:100%;background:#229ED9;color:#fff" id="xb">
+    <svg width="20" height="20"><use href="#tg"/></svg>
+    <span data-i="xb">Join @buyshopifypayments</span>
+  </a>
+  <button class="btn ghost" id="xn" style="width:100%;margin-top:8px;border:0" data-i="xn">No thanks</button></div></div>
+
+<script>
+(function(){
+var CFG={WA:'12542755458',TG:'jamesaccounts',EMAIL:'contact@ledgerline.com',SHOW_PROOF:false};
+var UTM='utm_source=google&utm_medium=ads&utm_campaign=ledgerline_p2p';
+var T={
+fr:{po:"Versement planifié",dh:"Bonjour, fondateur",ds:"Votre configuration paiements est sur la bonne voie.",hp:"Besoin d’aide ?",hp2:"J'aimerais acheter un compte Shopify",fc1:"KYB vérifié",fc2:"Checkout actif",n1:"Services",n2:"Processus",n3:"Contact",n4:"FAQ",cta:"Accès à la mise en place",bd:"Onboarding Stripe + Shopify",h1:"Lancez-vous sur une infrastructure de paiement solide.",sub:"Nous fournissons des comptes Stripe et Shopify pré-vérifiés et chauffés — KYC et KYB validés, paiements et virements actifs — prêts à lancer dès le premier jour.",b2:"Tester ma préparation",mt1:"Appel découverte gratuit",mt2:"Réponse sous 24 h",mt3:"Vos comptes restent à votre nom",mr:"Préparation marchand",mrt:"Votre boutique, avant décollage",c1:"Alignement KYB / KYC",c2:"Routage des versements",c3:"Protection contre les litiges",c4:"Optimisation du checkout",m0:"Touchez les éléments pour simuler un audit.",m1:"Tout est validé — prêt pour une revue en direct.",st1:"Comptes vendus",st2:"Délai de mise en place",st3:"Pays couverts",lgl:"Moyens de paiement et plateformes",pe:"What's included",ph:"Tout entre « order » et « first live payout ».",p1t:"Intégration Stripe & Shopify de bout en bout",p1d:"Checkout, webhooks, taxes, livraison et commandes configurés et testés, sous vos propres comptes et vos propres informations d’entreprise.",p2t:"Conformité et préparation à la souscription",p2d:"Politiques, pages produit et documents préparés comme les examinateurs l’attendent.",p3t:"Versements et architecture multidevise",p3d:"Devises, règlement et calendrier de versements adaptés à vos marchés.",p4t:"Support dédié et mise en place accélérée",p4d:"Un interlocuteur unique du lancement à la première commande, avec une checklist claire à chaque étape.",be:"Avant / après",bh:"D’une config bricolée à un lancement prêt.",bt:"Configuration classique en solo",at:"Avec Ledgerline",b1:"Informations d’entreprise incohérentes entre plateformes",b2x:"Politiques copiées ou absentes",b3:"Versements et devises devinés",b4:"Blocages et litiges surprises",a1:"Un profil d’entreprise cohérent partout",a2:"Politiques claires rédigées pour votre boutique",a3:"Plan de versements et devises testé",a4:"Gestion des litiges et suivi prêts",qze:"Outil gratuit",qzh:"Évaluez votre préparation aux paiements en 30 secondes.",qzs:"Répondez à 5 questions et voyez vos points faibles.",qe:"Processus",qh:"Trois étapes vers un traitement stable.",qs:"Cliquez sur une étape pour voir le détail.",t1t:"Onboarding",t1d:"Nous analysons votre structure juridique et préparons les informations de vérification pour des dossiers Stripe et Shopify complets et cohérents du premier coup.",t2t:"Construction",t2d:"Boutique, politiques, checkout, versements et litiges configurés et testés de bout en bout, avec commandes test avant la mise en ligne.",t3t:"Mise en ligne",t3d:"Lancement avec suivi et guide de passation, puis accompagnement à mesure que votre volume grandit.",pre:"Résultats",fqe:"FAQ",fqh:"Les questions qu’on nous pose d’abord.",fq1:"Est-ce légal ?",fa1:"Oui. Nous vous aidons à ouvrir vos propres comptes, à votre nom, en respectant les règles de chaque plateforme. Nous ne transférons, partageons ni revendons jamais de comptes.",fq2:"Mes comptes m’appartiennent-ils ?",fa2:"Toujours. Comptes, fonds et données restent sous le contrôle de votre entreprise.",fq3:"Combien de temps prend la mise en place ?",fa3:"Cela dépend de votre activité et des revues des plateformes. Nous donnons un calendrier réaliste lors de l’appel découverte.",fq4:"De quoi avez-vous besoin ?",fa4:"Vos informations et documents d’entreprise, vos produits, et un peu de temps pour les points de revue.",fq5:"Pouvez-vous garantir l’approbation ?",fa5:"Personne ne le peut — ce sont les plateformes qui décident. Nous rendons votre dossier complet, cohérent et prêt.",fe:"Accès à la mise en place",fh:"Parlez-nous de votre boutique.",fs:"Deux étapes rapides. Nous répondons avec un plan et un appel pour discuter de vos besoins.",fo:"Qu’est-ce qui vous décrit le mieux ?",o1:"Je lance une nouvelle boutique",o2:"Boutique existante, paiements à améliorer",o3:"Expansion vers de nouveaux marchés",fn:"Nom",fm:"E-mail",fv:"Volume mensuel estimé",bk:"Un appel ? Choisissez un créneau (facultatif)",bkb:"Retour",sb:"Demander l’accès",ft1:"© 2026 Ledgerline. Cabinet de conseil indépendant.",ft2:"Non affilié à Stripe ni Shopify. Marques simplifiées, propriété de leurs détenteurs.",xh:"Attendez — prenez la checklist de préparation",xp:"Une courte checklist de ce que regardent les examinateurs Stripe et Shopify. Laissez votre e-mail.",xb:"Envoyez-moi la checklist",xn:"Non merci",
+z1:"Do you need both Stripe and Shopify, or Stripe only?",z2:"Are you processing in USD, EUR, or GBP?",z3:"Do you plan to scale past $10k/month in your first 30 days?",z4:"Un compte bancaire au nom de l’entreprise est-il prêt pour les versements ?",z5:"Do you want the full 30-day warranty tier included?",yes:"Oui",no:"Pas encore",sc:"Votre préparation",gh:"Points à corriger",g1:"Entité juridique",g2:"Cohérence des informations",g3:"Politiques de la boutique",g4:"Compte bancaire pro",g5:"Plan litiges",r_hi:"Solide — vous êtes proche du lancement.",r_mid:"Bonne base, quelques points à combler.",r_lo:"Début de parcours — construisons les fondations.",qc:"Discuter de mes résultats",qa:"Refaire",stp:"Étape {a} sur 2",er:"Ajoutez votre nom et un e-mail valide.",ok:"Demande reçue, {n}. Nous revenons vers vous rapidement.",lt:"Heure locale"},
+es:{po:"Pago programado",dh:"Hola, fundador",ds:"Tu configuración de pagos va por buen camino.",hp:"¿Necesitas ayuda?",hp2:"Me gustaría comprar una cuenta Shopify",fc1:"KYB verificado",fc2:"Checkout activo",n1:"Servicios",n2:"Proceso",n3:"Contacto",n4:"FAQ",cta:"Acceso a la configuración",bd:"Onboarding Stripe + Shopify",h1:"Lanza sobre una infraestructura de pagos sólida.",sub:"Proporcionamos cuentas Stripe y Shopify pre-verificadas y calentadas — KYC y KYB verificados, pagos y reembolsos activos — listos para lanzar desde el primer día.",b2:"Medir mi preparación",mt1:"Llamada inicial gratis",mt2:"Respuesta en 24 h",mt3:"Tus cuentas siguen a tu nombre",mr:"Preparación del comercio",mrt:"Tu tienda, antes del despegue",c1:"Alineación KYB / KYC",c2:"Enrutamiento de pagos",c3:"Protección contra contracargos",c4:"Optimización del checkout",m0:"Toca los elementos para simular una revisión.",m1:"Todo aprobado — listo para una revisión en vivo.",st1:"Cuentas vendidas",st2:"Plazo de configuración",st3:"Países atendidos",lgl:"Métodos de pago y plataformas",pe:"Pilares",ph:"Todo entre la “idea” y el “primer pago”.",p1t:"Integración Stripe y Shopify de principio a fin",p1d:"Checkout, webhooks, impuestos, envíos y pedidos configurados y probados, con tus propias cuentas y datos de empresa.",p2t:"Cumplimiento y preparación de suscripción",p2d:"Políticas, páginas de producto y documentos preparados como esperan los revisores.",p3t:"Pagos y arquitectura multimoneda",p3d:"Monedas, liquidación y calendario de pagos planificados para tus mercados.",p4t:"Soporte dedicado y configuración acelerada",p4d:"Un único contacto desde el inicio hasta tu primer pedido, con una checklist clara en cada etapa.",be:"Antes / después",bh:"De una configuración caótica a lista para lanzar.",bt:"Configuración típica por tu cuenta",at:"Con Ledgerline",b1:"Datos de empresa distintos en cada plataforma",b2x:"Políticas copiadas o ausentes",b3:"Pagos y monedas a ojo",b4:"Retenciones y disputas sorpresa",a1:"Un perfil de empresa coherente en todas partes",a2:"Políticas claras escritas para tu tienda",a3:"Plan de pagos y monedas probado",a4:"Gestión de disputas y monitoreo listos",qze:"Herramienta gratis",qzh:"Mide tu preparación de pagos en 30 segundos.",qzs:"Responde 5 preguntas y descubre tus brechas.",qe:"Proceso",qh:"Tres pasos hacia un procesamiento estable.",qs:"Haz clic en un paso para ver el detalle.",t1t:"Onboarding",t1d:"Revisamos tu estructura empresarial y preparamos los datos de verificación para solicitudes de Stripe y Shopify completas y coherentes a la primera.",t2t:"Construcción",t2d:"Tienda, políticas, checkout, pagos y disputas configurados y probados de punta a punta, con pedidos de prueba antes de salir en vivo.",t3t:"Salida en vivo",t3d:"Lanzamiento con monitoreo y guía de traspaso, y soporte a medida que crece tu volumen.",pre:"Resultados",fqe:"FAQ",fqh:"Lo primero que preguntan los fundadores.",fq1:"¿Es legal?",fa1:"Sí. Te ayudamos a abrir tus propias cuentas, a tu nombre y cumpliendo las reglas de cada plataforma. Nunca transferimos, compartimos ni revendemos cuentas.",fq2:"¿Sigo siendo dueño de mis cuentas?",fa2:"Siempre. Cuentas, fondos y datos quedan bajo el control de tu empresa.",fq3:"¿Cuánto tarda la configuración?",fa3:"Depende de tu negocio y de las revisiones de las plataformas. Te damos un plazo realista en la llamada inicial.",fq4:"¿Qué necesitan de mí?",fa4:"Datos y documentos de tu empresa, información de tus productos y algo de tiempo para revisiones.",fq5:"¿Garantizan la aprobación?",fa5:"Nadie puede: deciden las plataformas. Dejamos tu solicitud completa, coherente y lista.",fe:"Acceso a la configuración",fh:"Cuéntanos sobre tu tienda.",fs:"Dos pasos rápidos. Respondemos con un plan y una llamada para hablar de tus necesidades.",fo:"¿Qué te describe mejor?",o1:"Lanzo una tienda nueva",o2:"Tienda existente, quiero mejorar pagos",o3:"Expansión a nuevos mercados",fn:"Nombre",fm:"Correo",fv:"Volumen mensual estimado",bk:"¿Prefieres una llamada? Elige hora (opcional)",bkb:"Atrás",sb:"Solicitar acceso",ft1:"© 2026 Ledgerline. Consultora independiente.",ft2:"Sin afiliación con Stripe ni Shopify. Marcas simplificadas de sus propietarios.",xh:"Espera — llévate la checklist de preparación",xp:"Una checklist breve de lo que revisan Stripe y Shopify. Deja tu correo.",xb:"Envíame la checklist",xn:"No, gracias",
+z1:"¿Tienes una entidad legal registrada?",z2:"¿Tu nombre y dirección legales coinciden en todos los documentos?",z3:"¿Tu tienda muestra políticas de reembolso, envío y privacidad?",z4:"¿Tienes cuenta bancaria a nombre de la empresa para los pagos?",z5:"¿Tienes un plan contra disputas y fraude?",yes:"Sí",no:"Aún no",sc:"Tu preparación",gh:"Puntos a corregir",g1:"Entidad legal",g2:"Datos coherentes",g3:"Políticas de la tienda",g4:"Cuenta bancaria",g5:"Plan de disputas",r_hi:"Sólido — estás cerca del lanzamiento.",r_mid:"Buena base, faltan algunos puntos.",r_lo:"Etapa inicial — construyamos la base.",qc:"Hablar de mis resultados",qa:"Repetir",stp:"Paso {a} de 2",er:"Añade tu nombre y un correo válido.",ok:"Solicitud recibida, {n}. Te contactaremos pronto.",lt:"Hora local"},
+ar:{po:"تحويل مجدول",dh:"مرحبًا، أيها المؤسس",ds:"إعداد مدفوعاتك يسير على المسار الصحيح.",hp:"تحتاج مساعدة؟",hp2:"أريد شراء حساب Shopify",fc1:"تم توثيق KYB",fc2:"الدفع يعمل",n1:"خدماتنا",n2:"المراحل",n3:"تواصل",n4:"الأسئلة",cta:"احصل على الإعداد",bd:"تهيئة Stripe + Shopify",h1:"انطلق على بنية دفع متينة.",sub:"نوفر حسابات Stripe و Shopify مسبقة التحقق والتسخين — KYC و KYB — المدفوعات والموارد active — جاهزة للإطلاق من اليوم الأول.",b2:"افحص جاهزيتي",mt1:"مكالمة تعارف مجانية",mt2:"رد خلال 24 ساعة",mt3:"حساباتك تبقى باسمك",mr:"جاهزية التاجر",mrt:"متجرك قبل الإقلاع",c1:"مطابقة KYB / KYC",c2:"توجيه التحويلات",c3:"الحماية من النزاعات",c4:"تحسين صفحة الدفع",m0:"اضغط على العناصر لمحاكاة المراجعة.",m1:"اكتملت كل الفحوصات — جاهز للمراجعة المباشرة.",st1:"متاجر أُطلقت",st2:"مدة الإعداد المعتادة",st3:"دول مدعومة",lgl:"وسائل الدفع والمنصات",pe:"الركائز",ph:"كل ما بين «الفكرة» و«أول تحويل».",p1t:"تكامل Stripe وShopify من البداية للنهاية",p1d:"الدفع والويب هوك والضرائب والشحن والطلبات مضبوطة ومختبرة، تحت حساباتك وبيانات شركتك أنت.",p2t:"الامتثال والجاهزية للمراجعة",p2d:"سياسات وصفحات منتجات ومستندات مُعدّة كما يتوقعها المراجعون.",p3t:"التحويلات وهيكلة العملات المتعددة",p3d:"العملات والتسوية وجدول التحويلات مخططة وفق أسواقك.",p4t:"دعم مخصص وإعداد سريع",p4d:"جهة اتصال واحدة من البداية حتى أول طلب مباشر، مع قائمة واضحة لكل مرحلة.",be:"قبل / بعد",bh:"من إعداد مبعثر إلى جاهزية كاملة للإطلاق.",bt:"الإعداد الذاتي المعتاد",at:"مع Ledgerline",b1:"بيانات نشاط غير متطابقة بين المنصات",b2x:"سياسات منسوخة أو مفقودة",b3:"تحويلات وعملات بالتخمين",b4:"تجميد ونزاعات مفاجئة",a1:"ملف نشاط واحد متسق في كل مكان",a2:"سياسات واضحة مكتوبة لمتجرك",a3:"خطة تحويلات وعملات مختبرة",a4:"مسار نزاعات ومراقبة جاهزان",qze:"أداة مجانية",qzh:"اعرف جاهزية مدفوعاتك في 30 ثانية.",qzs:"أجب عن 5 أسئلة سريعة وشاهد الثغرات.",qe:"المراحل",qh:"ثلاث خطوات نحو معالجة مستقرة.",qs:"اضغط على خطوة لرؤية تفاصيلها.",t1t:"التهيئة",t1d:"نراجع هيكل نشاطك ونجهّز بيانات التحقق لتكون طلبات Stripe وShopify كاملة ومتسقة من أول مرة.",t2t:"البناء",t2d:"المتجر والسياسات والدفع والتحويلات والنزاعات مضبوطة ومختبرة بالكامل، مع طلبات تجريبية قبل الإطلاق.",t3t:"الإطلاق",t3d:"إطلاق مع مراقبة ودليل تسليم، ثم دعم مستمر مع نمو حجمك.",pre:"النتائج",fqe:"الأسئلة",fqh:"أول ما يسأل عنه المؤسسون.",fq1:"هل هذا قانوني؟",fa1:"نعم. نساعدك على فتح حساباتك الخاصة باسمك وفق قواعد كل منصة. لا ننقل الحسابات ولا نشاركها ولا نبيعها أبدًا.",fq2:"هل أملك حساباتي؟",fa2:"دائمًا. الحسابات والأموال والبيانات تبقى تحت سيطرة نشاطك.",fq3:"كم يستغرق الإعداد؟",fa3:"يعتمد على نشاطك ومراجعات المنصات. نعطيك جدولًا واقعيًا في مكالمة التعارف.",fq4:"ماذا تحتاجون مني؟",fa4:"بيانات ومستندات نشاطك، ومعلومات منتجاتك، وقليلًا من الوقت لمكالمات المراجعة.",fq5:"هل تضمنون القبول؟",fa5:"لا أحد يستطيع — القرار للمنصات. نجعل طلبك كاملًا ومتسقًا وجاهزًا.",fe:"احصل على الإعداد",fh:"حدّثنا عن متجرك.",fs:"خطوتان سريعتان. نرد بخطة ومكالمة لمناقشة احتياجاتك.",fo:"ما الوصف الأنسب لك؟",o1:"أطلق متجرًا جديدًا",o2:"متجر قائم وأريد تحسين الدفع",o3:"التوسع إلى أسواق جديدة",fn:"الاسم",fm:"البريد",fv:"الحجم الشهري المتوقع",bk:"تفضّل مكالمة؟ اختر وقتًا (اختياري)",bkb:"رجوع",sb:"اطلب الوصول",ft1:"© 2026 Ledgerline. استشارات مستقلة.",ft2:"غير تابعة لـ Stripe أو Shopify. العلامات مبسّطة وتعود لأصحابها.",xh:"لحظة — احصل على قائمة الجاهزية",xp:"قائمة قصيرة بما يراجعه Stripe وShopify. اترك بريدك.",xb:"أرسلوا لي القائمة",xn:"لا، شكرًا",
+z1:"هل لديك كيان قانوني مسجل؟",z2:"هل يتطابق اسمك وعنوانك القانوني في كل المستندات؟",z3:"هل يعرض متجرك سياسات الاسترجاع والشحن والخصوصية؟",z4:"هل لديك حساب بنكي باسم الشركة للتحويلات؟",z5:"هل لديك خطة للنزاعات والاحتيال؟",yes:"نعم",no:"ليس بعد",sc:"جاهزيتك",gh:"نقاط تحتاج إصلاحًا",g1:"الكيان القانوني",g2:"اتساق البيانات",g3:"سياسات المتجر",g4:"حساب بنكي",g5:"خطة النزاعات",r_hi:"قوي — أنت قريب من الإطلاق.",r_mid:"أساس جيد وبعض الثغرات.",r_lo:"مرحلة مبكرة — لنبنِ الأساس.",qc:"ناقش نتيجتي",qa:"إعادة",stp:"الخطوة {a} من 2",er:"أضف اسمك وبريدًا صالحًا.",ok:"تم استلام طلبك، {n}. سنتواصل معك قريبًا.",lt:"بتوقيتك المحلي"},
+zh:{po:"回款已排期",dh:"你好，创始人",ds:"您的支付配置进展顺利。",hp:"需要帮助？",hp2:"我想购买 Shopify 账户",fc1:"KYB 已验证",fc2:"结账已上线",n1:"服务",n2:"流程",n3:"联系",n4:"常见问题",cta:"获取开通方案",bd:"Stripe + Shopify 开通服务",h1:"在稳固的支付基础设施上启动。",sub:"我们提供预验证、预热的 Stripe 和 Shopify 账户 — KYC 和 KYB已清 — 支付和结算已激活 — 可立即上线从第一天。",b2:"测测我的就绪度",mt1:"免费初次沟通",mt2:"24 小时内回复",mt3:"账户始终在您名下",mr:"商户就绪度",mrt:"起飞前检查",c1:"KYB / KYC 信息一致",c2:"回款路由",c3:"拒付保护",c4:"结账优化",m0:"点击各项以模拟就绪度审查。",m1:"全部通过，可进入正式审核。",st1:"已上线店铺",st2:"常规开通周期",st3:"覆盖国家",lgl:"合作的支付方式与平台",pe:"核心能力",ph:"从“想法”到“首笔回款”的一切。",p1t:"Stripe 与 Shopify 全流程集成",p1d:"结账、Webhook、税费、物流与订单流程一次配置并充分测试，使用您自己的账户与企业信息。",p2t:"核保与合规准备",p2d:"政策、产品页与文件按审核人员的期望准备。",p3t:"回款与多币种架构",p3d:"根据您的市场规划币种、结算与回款周期。",p4t:"专属支持与快速开通",p4d:"从启动到首个真实订单只有一位对接人，每个阶段都有清晰清单。",be:"对比",bh:"从混乱配置到随时可上线。",bt:"常见的自行配置",at:"使用 Ledgerline",b1:"各平台的企业信息不一致",b2x:"政策照搬或缺失",b3:"回款与币种凭感觉设置",b4:"意外冻结与争议",a1:"各处统一的企业资料",a2:"为您的店铺撰写清晰政策",a3:"经过测试的回款与币种方案",a4:"争议流程与监控就绪",qze:"免费工具",qzh:"30 秒检查您的支付就绪度。",qzs:"回答 5 个问题，查看待改进之处。",qe:"流程",qh:"三步实现稳定收款。",qs:"点击步骤查看详情。",t1t:"开通",t1d:"我们梳理您的企业结构并准备验证资料，使 Stripe 与 Shopify 申请一次完整一致。",t2t:"搭建",t2d:"店铺、政策、结账、回款与争议处理全链路配置并测试，上线前先跑测试订单。",t3t:"上线",t3d:"带监控与交接指南上线，并随业务增长持续支持。",pre:"成果",fqe:"常见问题",fqh:"创业者最先会问的问题。",fq1:"这合法吗？",fa1:"合法。我们帮助您以自己的名义开设账户，并遵守各平台规则。我们绝不转让、共享或转售账户。",fq2:"账户归我所有吗？",fa2:"始终如此。账户、资金与数据都由您的企业掌控。",fq3:"开通要多久？",fa3:"取决于您的业务和平台审核。初次沟通时我们会给出现实的时间表。",fq4:"需要我提供什么？",fa4:"企业资料与文件、产品信息，以及少量时间参与沟通。",fq5:"能保证通过审核吗？",fa5:"没有人能保证——由平台决定。我们让您的申请完整、一致、准备充分。",fe:"获取开通方案",fh:"介绍一下您的店铺。",fs:"两个简单步骤。我们会回复方案并约电话讨论您的需求。",fo:"哪项最符合您的情况？",o1:"准备开新店",o2:"已有店铺，想优化支付",o3:"拓展新市场",fn:"姓名",fm:"邮箱",fv:"预计月交易额",bk:"想通话？选个时间（可选）",bkb:"返回",sb:"申请开通",ft1:"© 2026 Ledgerline。独立咨询机构。",ft2:"与 Stripe、Shopify 无关联。简化标识归各自所有者。",xh:"等一下——领取就绪度清单",xp:"一份简短清单，列出 Stripe 与 Shopify 审核关注点。请留下邮箱。",xb:"发给我清单",xn:"不用了",
+z1:"您有已注册的企业主体吗？",z2:"各文件上的法定名称和地址一致吗？",z3:"店铺是否展示退款、配送和隐私政策？",z4:"是否有以企业名义开立的收款银行账户？",z5:"是否有争议与欺诈应对计划？",yes:"是",no:"还没有",sc:"您的就绪度",gh:"待改进",g1:"企业主体",g2:"资料一致性",g3:"店铺政策",g4:"银行账户",g5:"争议计划",r_hi:"很稳——离上线不远了。",r_mid:"基础不错，还有几处要补。",r_lo:"起步阶段——先打好基础。",qc:"讨论我的结果",qa:"重做",stp:"第 {a} 步，共 2 步",er:"请填写姓名和有效邮箱。",ok:"已收到申请，{n}。我们会尽快联系您。",lt:"您的当地时间"}
+};
+T.fr.xh="Avant de partir — voyez nos preuves et notre stock";
+T.fr.xp="Rejoignez notre canal Telegram pour voir le stock disponible, les #feedbacks de clients et les #scammers dénoncés.";
+T.fr.xb="Rejoindre @buyshopifypayments";
+T.es.xh="Antes de irte — mira nuestras pruebas y stock";
+T.es.xp="Únete a nuestro canal de Telegram para ver stock disponible, #feedbacks de clientes y #scammers expuestos.";
+T.es.xb="Unirse a @buyshopifypayments";
+T.ar.xh="قبل المغادرة — شاهد إثباتاتنا والمخزون المتاح";
+T.ar.xp="انضم إلى قناتنا على تيليجرام لمشاهدة الحسابات المتوفرة، وتقييمات العملاء #feedbacks، وقائمة المحتالين #scammers.";
+T.ar.xb="انضم إلى @buyshopifypayments";
+T.zh.xh="离开前——查看实时库存与成交反馈";
+T.zh.xp="加入我们的 Telegram 频道，查看当前可用账户、过往成交 #feedbacks 以及曝光的 #scammers。";
+T.zh.xb="加入 @buyshopifypayments";
+var EN={},els=[].slice.call(document.querySelectorAll('[data-i]')),L='en',R=document.documentElement;
+els.forEach(function(e){EN[e.dataset.i]=e.textContent});
+var X={z1:"Do you need a Stripe + Shopify account bundle?",z2:"Do you need an account for the US, UK, or EU region?",z3:"Will your expected monthly processing volume exceed $10k?",z4:"Do you have a secure, dedicated device and network ready for account access?",z5:"Would you like the 30-day replacement warranty?",yes:"Yes",no:"Not yet",sc:"Your package match",gh:"Package details to confirm",g1:"Platform package",g2:"Business region",g3:"Volume tier",g4:"Secure access setup",g5:"Warranty tier",r_hi:"Great match — your answers point to a clear package.",r_mid:"Your package needs a few details confirmed.",r_lo:"Let’s find an account package that fits your needs.",qc:"Choose my package",qa:"Retake",stp:"Step {a} of 2",er:"Please add your name and a valid email.",ok:"Request received, {n}. We’ll be in touch shortly.",lt:"Your local time",languageLabel:"Language",themeLabel:"Theme"};
+for(var k in X)EN[k]=X[k];
+var PILLARS={
+ en:{pe:"What’s included",ph:"Everything between “order” and “first live payout.”",p1t:"Pre-verified & warmed Stripe and Shopify accounts",p1d:"KYC and KYB cleared with live card processing and payouts active—delivered ready to connect to your store with full login, email, and 2FA control.",p2s:"● 30-day warranty",p2t:"Up to 30-day replacement warranty",p2d:"Every account is backed by up to 30 days of replacement coverage against initial verification holds or unexpected lockouts.",p3t:"Multi-currency & instant payout routing",p3d:"US, UK, and EU verified entities ready for fast bank/IBAN settlements across your target markets.",p4s:"Same-day handover",p4t:"Warming history & safe handover guide",p4d:"Pre-warmed with clean baseline activity and delivered with a step-by-step IP/proxy setup guide so you can scale smoothly from day one."},
+ fr:{pe:"Ce qui est inclus",ph:"Tout entre « la commande » et « le premier versement en direct ».",p1t:"Comptes Stripe et Shopify pré-vérifiés et chauffés",p1d:"KYC et KYB validés, traitement des cartes actif et versements disponibles — livrés prêts à connecter à votre boutique avec accès complet à l’e-mail, au login et à la 2FA.",p2s:"● Garantie de 30 jours",p2t:"Garantie de remplacement jusqu’à 30 jours",p2d:"Chaque compte bénéficie d’une couverture de remplacement allant jusqu’à 30 jours contre les blocages initiaux ou les verrouillages inattendus.",p3t:"Multidevise & routage instantané des versements",p3d:"Entités vérifiées aux États-Unis, au Royaume-Uni et dans l’UE, prêtes pour des règlements rapides par banque ou IBAN sur vos marchés.",p4s:"Remise le jour même",p4t:"Historique chauffé & guide de remise sécurisé",p4d:"Pré-chauffés avec une activité de base saine et livrés avec un guide IP/proxy étape par étape pour évoluer sereinement dès le premier jour."},
+ es:{pe:"Qué incluye",ph:"Todo entre “tu pedido” y el “primer pago activo”.",p1t:"Cuentas Stripe y Shopify pre-verificadas y calentadas",p1d:"KYC y KYB aprobados, procesamiento de tarjetas activo y pagos disponibles — entregadas listas para conectar con tu tienda con acceso completo al login, email y 2FA.",p2s:"● Garantía de 30 días",p2t:"Garantía de reemplazo de hasta 30 días",p2d:"Cada cuenta incluye hasta 30 días de cobertura de reemplazo ante bloqueos iniciales de verificación o restricciones inesperadas.",p3t:"Multimoneda y ruta de pago instantánea",p3d:"Entidades verificadas de EE. UU., Reino Unido y UE, listas para liquidaciones rápidas por banco o IBAN en tus mercados.",p4s:"Entrega el mismo día",p4t:"Historial calentado y guía segura de entrega",p4d:"Precalentadas con actividad limpia y entregadas con una guía paso a paso de configuración IP/proxy para escalar sin problemas desde el primer día."},
+ ar:{pe:"ما الذي يتضمنه العرض",ph:"كل ما بين «الطلب» و«أول تحويل مباشر».",p1t:"حسابات Stripe وShopify مُحققة ومُسخّنة مسبقًا",p1d:"تم اجتياز KYC وKYB، ومعالجة البطاقات والتحويلات نشطة — وتسليم جاهز للربط بمتجرك مع تحكم كامل في تسجيل الدخول والبريد و2FA.",p2s:"● ضمان لمدة 30 يومًا",p2t:"ضمان استبدال يصل إلى 30 يومًا",p2d:"كل حساب مشمول بتغطية استبدال تصل إلى 30 يومًا ضد حجز التحقق الأولي أو القفل غير المتوقع.",p3t:"عملات متعددة وتوجيه تحويلات فوري",p3d:"كيانات موثقة في الولايات المتحدة والمملكة المتحدة والاتحاد الأوروبي، جاهزة للتسويات البنكية أو IBAN السريعة عبر أسواقك.",p4s:"التسليم في نفس اليوم",p4t:"سجل تسخين ودليل تسليم آمن",p4d:"مُسخّن مسبقًا بنشاط نظيف، ويُسلّم مع دليل إعداد IP/proxy خطوة بخطوة لتتمكن من التوسع بسلاسة من اليوم الأول."},
+ zh:{pe:"包含内容",ph:"从“下单”到“首笔实时回款”的一切。",p1t:"预验证、预热的 Stripe 与 Shopify 账户",p1d:"已完成 KYC 和 KYB，支持实时卡支付且回款已启用——交付时即可连接店铺，并提供完整的登录、邮箱和 2FA 控制权。",p2s:"● 30 天保修",p2t:"最高 30 天替换保修",p2d:"每个账户均享有最长 30 天的替换保障，覆盖初始验证冻结或意外限制。",p3t:"多币种与即时回款路由",p3d:"美国、英国和欧盟实体已完成验证，可在目标市场通过银行或 IBAN 快速结算。",p4s:"当日交付",p4t:"预热记录与安全交接指南",p4d:"采用干净的基线活动预热交付，并附带逐步 IP/代理设置指南，助您从第一天起平稳扩展。"}
+};
+var COPY={
+ fr:{
+  fqe:"Questions fréquentes",
+  n1:"Ce qui est inclus",cta:"Acheter un compte",h1:"Des comptes de paiement prêts à l’emploi pour démarrer immédiatement.",bd:"Comptes Stripe et Shopify vérifiés",sub:"Des comptes Stripe et Shopify pré-vérifiés et préchauffés, avec KYC/KYB validés et paiements actifs, prêts à être utilisés dès le premier jour.",b2:"Trouver mon offre",mt1:"Garantie jusqu’à 30 jours",mt2:"Livraison le jour même",mt3:"Accès complet et remise de la 2FA",
+  st1:"Comptes vendus",st2:"Délai moyen de livraison",st3:"Pays pris en charge",pe:"Ce qui est inclus",ph:"Tout entre « la commande » et « le premier versement en direct ».",p1t:"Comptes Stripe et Shopify pré-vérifiés et préchauffés",p1d:"KYC et KYB validés, paiements par carte et versements actifs — prêts à connecter à votre boutique avec accès complet au compte, à l’e-mail et à la 2FA.",p2s:"● Garantie de 30 jours",p2t:"Garantie de remplacement jusqu’à 30 jours",p2d:"Chaque compte bénéficie d’une couverture de remplacement allant jusqu’à 30 jours contre les blocages de vérification initiaux ou les verrouillages inattendus.",p3t:"Multidevise et routage instantané des versements",p3d:"Entités vérifiées aux États-Unis, au Royaume-Uni et dans l’UE, prêtes pour des règlements rapides par banque ou IBAN sur vos marchés.",p4s:"Remise le jour même",p4t:"Historique préchauffé et guide de remise sécurisé",p4d:"Comptes préchauffés avec une activité de base saine et livrés avec un guide IP/proxy étape par étape pour évoluer sereinement dès le premier jour.",
+  be:"Comparaison",bh:"Nouvelles demandes à froid vs comptes pré-vérifiés et préchauffés.",bt:"Nouvelles demandes",at:"Comptes prêts à l’emploi",b1:"Délais d’attente pour la vérification KYC/KYB",b2x:"Comptes récents susceptibles d’être signalés",b3:"Aucune couverture de remplacement",b4:"Historique de paiement inexistant",a1:"Vérification KYC et KYB déjà effectuée",a2:"Historique d’activité préchauffé",a3:"Paiements et versements activés",a4:"Garantie de remplacement jusqu’à 30 jours",
+  qzh:"Trouvez l’offre de compte adaptée en 30 secondes.",qzs:"Répondez à 5 questions pour identifier le forfait qui vous convient.",qe:"Étapes",qh:"Trois étapes jusqu’à la première transaction.",qs:"Choisissez une étape pour voir comment se déroule la remise.",t1t:"Choisir une offre",t1d:"Choisissez votre plateforme (Stripe, Shopify ou les deux), la région de l’entité (États-Unis, Royaume-Uni, UE) et la garantie jusqu’à 30 jours.",t2t:"Remise rapide",t2d:"Recevez les identifiants, l’e-mail vérifié d’origine, les clés 2FA et un guide IP/proxy dans un délai de 30 à 60 minutes.",t3t:"Connecter et encaisser",t3d:"Reliez votre boutique, configurez les versements vers votre banque/IBAN et acceptez immédiatement les paiements par carte.",
+  fq1:"Que comprend la remise du compte ?",fa1:"L’accès au compte, l’e-mail vérifié d’origine, les clés 2FA et un guide de remise.",fq2:"Comment fonctionne la garantie de 30 jours ?",fa2:"La garantie prévoit un remplacement jusqu’à 30 jours en cas de blocage initial de vérification ou de verrouillage inattendu, selon ses conditions.",fq3:"Les comptes sont-ils préchauffés avant la livraison ?",fa3:"Les comptes sont préparés avec une activité de base avant la remise.",fq4:"Quel est le délai de livraison ?",fa4:"Les comptes disponibles sont généralement remis le jour même; le délai exact est confirmé avant le paiement.",fq5:"Puis-je contrôler les accès et les versements ?",fa5:"Les accès et les versements doivent être gérés conformément aux règles de la plateforme et aux informations de l’entreprise concernée.",
+  fe:"Acheter un compte",fh:"Commandez votre compte vérifié.",fs:"Choisissez votre offre ci-dessous et contactez-nous directement. Nous répondons en quelques minutes avec le stock disponible et les informations de paiement.",fo:"Quelle offre de compte vous faut-il ?",o1:"Compte Stripe vérifié",o2:"Compte Shopify vérifié avec paiements",o3:"Offre groupée Stripe + Shopify avec garantie 30 jours",sb:"Commander",ft1:"© 2026 Ledgerline. Infrastructure de paiement e-commerce vérifiée.",
+  z1:"Avez-vous besoin d’un compte Stripe et Shopify en offre groupée ?",z2:"Avez-vous besoin d’une région États-Unis, Royaume-Uni ou UE ?",z3:"Votre volume mensuel prévu dépassera-t-il 10 000 $ ?",z4:"Disposez-vous d’un appareil et d’un réseau dédiés et sécurisés pour accéder au compte ?",z5:"Souhaitez-vous la garantie de remplacement de 30 jours ?",g1:"Offre de plateforme",g2:"Région de l’entité",g3:"Niveau de volume",g4:"Configuration d’accès sécurisé",g5:"Niveau de garantie",sc:"Votre offre",gh:"Détails à confirmer",r_hi:"Votre profil correspond clairement à une offre.",r_mid:"Quelques détails sont à confirmer pour choisir votre offre.",r_lo:"Trouvons une offre adaptée à vos besoins.",qc:"Choisir mon offre",qa:"Recommencer",
+  docTitle:"Ledgerline — Comptes Stripe et Shopify vérifiés et préparés",navHome:"Accueil",navFeedbacks:"Avis",navAccounts:"Comptes",languageLabel:"Langue",themeLabel:"Changer le thème",
+  footerDescription:"Comptes Stripe et Shopify pré-vérifiés et préparés pour les entreprises en ligne.",footerExplore:"Explorer",footerCommunity:"Communauté",footerPolicies:"Politiques",footerIncluded:"Ce qui est inclus",footerProcess:"Processus",footerFaq:"FAQ",footerContact:"Contact",footerBlog:"Blog",footerFeedbacks:"Avis",footerAccounts:"Comptes",footerAbout:"À propos",footerPoliciesLink:"Politiques",footerRefund:"Politique de remboursement",footerDisclaimer:"Non affilié à Stripe ni Shopify. Leurs noms et marques appartiennent à leurs propriétaires respectifs."
+ },
+ es:{
+  fqe:"Preguntas frecuentes",
+  n1:"Qué incluye",cta:"Comprar cuenta",h1:"Cuentas de pago listas para empezar desde el primer día.",bd:"Cuentas Stripe y Shopify verificadas",sub:"Cuentas Stripe y Shopify pre-verificadas y calentadas, con KYC/KYB aprobado y pagos activos, listas para usar desde el primer día.",b2:"Encontrar mi paquete",mt1:"Garantía de hasta 30 días",mt2:"Entrega el mismo día",mt3:"Acceso completo y entrega de 2FA",
+  st1:"Cuentas vendidas",st2:"Tiempo medio de entrega",st3:"Países disponibles",pe:"Qué incluye",ph:"Todo entre “tu pedido” y el “primer pago activo”.",p1t:"Cuentas Stripe y Shopify pre-verificadas y calentadas",p1d:"KYC y KYB aprobados, pagos con tarjeta y liquidaciones activos — listas para conectar con tu tienda con acceso completo a la cuenta, email y 2FA.",p2s:"● Garantía de 30 días",p2t:"Garantía de reemplazo de hasta 30 días",p2d:"Cada cuenta incluye hasta 30 días de cobertura de reemplazo ante bloqueos iniciales de verificación o cierres inesperados.",p3t:"Multimoneda y ruta de pago instantánea",p3d:"Entidades verificadas de EE. UU., Reino Unido y UE, listas para liquidaciones rápidas por banco o IBAN en tus mercados.",p4s:"Entrega el mismo día",p4t:"Historial calentado y guía segura de entrega",p4d:"Cuentas precalentadas con actividad base limpia y entregadas con una guía paso a paso de IP/proxy para crecer con tranquilidad desde el primer día.",
+  be:"Comparativa",bh:"Solicitudes nuevas frente a cuentas pre-verificadas y calentadas.",bt:"Solicitudes nuevas",at:"Cuentas listas para usar",b1:"Esperas para la verificación KYC/KYB",b2x:"Las cuentas nuevas pueden activar revisiones",b3:"Sin cobertura de reemplazo",b4:"Sin historial de pagos",a1:"KYC y KYB ya verificados",a2:"Historial de actividad calentado",a3:"Pagos y liquidaciones activos",a4:"Garantía de reemplazo de hasta 30 días",
+  qzh:"Encuentra el paquete de cuenta adecuado en 30 segundos.",qzs:"Responde 5 preguntas para encontrar el paquete que necesitas.",qe:"Proceso",qh:"Tres pasos hasta tu primer pago.",qs:"Selecciona un paso para ver cómo se realiza la entrega.",t1t:"Elegir paquete",t1d:"Elige la plataforma (Stripe, Shopify o ambas), la región de la entidad (EE. UU., Reino Unido, UE) y la garantía de hasta 30 días.",t2t:"Entrega rápida",t2d:"Recibe las credenciales, el email verificado original, las claves 2FA y una guía de IP/proxy en 30–60 minutos.",t3t:"Conectar y procesar",t3d:"Conecta tu tienda, configura los pagos a tu banco/IBAN y acepta pagos con tarjeta de inmediato.",
+  fq1:"¿Qué incluye la entrega de la cuenta?",fa1:"Acceso a la cuenta, email verificado original, claves 2FA y una guía de entrega.",fq2:"¿Cómo funciona la garantía de 30 días?",fa2:"La garantía ofrece reemplazo de hasta 30 días ante bloqueos iniciales de verificación o cierres inesperados, sujeto a sus condiciones.",fq3:"¿Las cuentas se calientan antes de la entrega?",fa3:"Las cuentas se preparan con actividad base antes de la entrega.",fq4:"¿Cuánto tarda la entrega?",fa4:"Las cuentas disponibles suelen entregarse el mismo día; confirmamos el plazo exacto antes del pago.",fq5:"¿Puedo controlar el acceso y los pagos?",fa5:"El acceso y los pagos deben gestionarse de acuerdo con las reglas de la plataforma y los datos de la empresa correspondiente.",
+  fe:"Comprar cuenta",fh:"Pide tu cuenta verificada.",fs:"Elige tu paquete y escríbenos directamente. Respondemos en minutos con el stock disponible y los datos de pago.",fo:"¿Qué paquete de cuenta necesitas?",o1:"Cuenta Stripe verificada",o2:"Cuenta Shopify verificada con pagos",o3:"Paquete Stripe + Shopify con garantía de 30 días",sb:"Hacer pedido",ft1:"© 2026 Ledgerline. Infraestructura de pagos para comercio electrónico verificada.",
+  z1:"¿Necesitas un paquete con Stripe y Shopify?",z2:"¿Necesitas una región de EE. UU., Reino Unido o UE?",z3:"¿Tu volumen mensual previsto superará los 10.000 $?",z4:"¿Tienes un dispositivo y una red seguros y dedicados para acceder a la cuenta?",z5:"¿Quieres la garantía de reemplazo de 30 días?",g1:"Paquete de plataforma",g2:"Región de la entidad",g3:"Nivel de volumen",g4:"Configuración de acceso seguro",g5:"Nivel de garantía",sc:"Tu paquete",gh:"Detalles por confirmar",r_hi:"Tus respuestas indican claramente qué paquete encaja.",r_mid:"Faltan algunos detalles para elegir tu paquete.",r_lo:"Busquemos un paquete que se adapte a tus necesidades.",qc:"Elegir mi paquete",qa:"Repetir",
+  docTitle:"Ledgerline — Cuentas de Stripe y Shopify verificadas y preparadas",navHome:"Inicio",navFeedbacks:"Opiniones",navAccounts:"Cuentas",languageLabel:"Idioma",themeLabel:"Cambiar tema",
+  footerDescription:"Cuentas de Stripe y Shopify pre-verificadas y preparadas para negocios en línea.",footerExplore:"Explorar",footerCommunity:"Comunidad",footerPolicies:"Políticas",footerIncluded:"Qué incluye",footerProcess:"Proceso",footerFaq:"Preguntas frecuentes",footerContact:"Contacto",footerBlog:"Blog",footerFeedbacks:"Opiniones",footerAccounts:"Cuentas",footerAbout:"Acerca de",footerPoliciesLink:"Políticas",footerRefund:"Política de reembolso",footerDisclaimer:"Sin afiliación con Stripe ni Shopify. Sus nombres y marcas pertenecen a sus respectivos propietarios."
+ },
+ ar:{
+  n1:"ما الذي يتضمنه العرض",cta:"شراء حساب",h1:"حسابات دفع جاهزة للاستخدام من اليوم الأول.",bd:"حسابات Stripe وShopify موثقة",sub:"حسابات Stripe وShopify موثقة ومُسخّنة مسبقًا، مع استكمال KYC/KYB وتفعيل المدفوعات، وجاهزة للاستخدام من اليوم الأول.",b2:"اعثر على الباقة المناسبة",mt1:"ضمان يصل إلى 30 يومًا",mt2:"التسليم في اليوم نفسه",mt3:"تحكم كامل وتسليم بيانات 2FA",
+  st1:"حسابات مباعة",st2:"متوسط وقت التسليم",st3:"الدول المتاحة",pe:"ما الذي يتضمنه العرض",ph:"كل ما بين «الطلب» و«أول تحويل مباشر».",p1t:"حسابات Stripe وShopify موثقة ومُسخّنة مسبقًا",p1d:"تم استكمال KYC وKYB وتفعيل مدفوعات البطاقات والتحويلات — جاهزة للربط بمتجرك مع وصول كامل للحساب والبريد و2FA.",p2s:"● ضمان لمدة 30 يومًا",p2t:"ضمان استبدال يصل إلى 30 يومًا",p2d:"يشمل كل حساب تغطية استبدال تصل إلى 30 يومًا عند حجز التحقق الأولي أو القفل غير المتوقع.",p3t:"عملات متعددة وتوجيه فوري للتحويلات",p3d:"كيانات موثقة في الولايات المتحدة والمملكة المتحدة والاتحاد الأوروبي، جاهزة للتسوية السريعة عبر البنك أو IBAN في أسواقك.",p4s:"التسليم في اليوم نفسه",p4t:"سجل نشاط مُسخّن ودليل تسليم آمن",p4d:"حسابات مُسخّنة بنشاط أساسي سليم، مع دليل خطوة بخطوة لإعداد IP/proxy للتوسع بسلاسة من اليوم الأول.",
+  be:"مقارنة",bh:"طلبات جديدة مقابل حسابات موثقة ومُسخّنة مسبقًا.",bt:"طلبات جديدة",at:"حسابات جاهزة للاستخدام",b1:"انتظار مراجعات KYC/KYB",b2x:"قد تؤدي الحسابات الجديدة إلى مراجعات إضافية",b3:"لا توجد تغطية للاستبدال",b4:"لا يوجد سجل للمدفوعات",a1:"تم استكمال KYC وKYB",a2:"سجل نشاط مُسخّن",a3:"المدفوعات والتحويلات مفعّلة",a4:"ضمان استبدال يصل إلى 30 يومًا",
+  qzh:"اعثر على باقة الحساب المناسبة خلال 30 ثانية.",qzs:"أجب عن 5 أسئلة لتحديد الباقة المناسبة لك.",qe:"الخطوات",qh:"ثلاث خطوات حتى أول دفعة.",qs:"اختر خطوة لمعرفة تفاصيل التسليم.",t1t:"اختر الباقة",t1d:"اختر المنصة (Stripe أو Shopify أو كليهما)، ومنطقة الكيان (الولايات المتحدة أو المملكة المتحدة أو الاتحاد الأوروبي)، والضمان حتى 30 يومًا.",t2t:"تسليم سريع",t2d:"استلم بيانات الدخول والبريد الأصلي الموثق ومفاتيح 2FA ودليل IP/proxy خلال 30–60 دقيقة.",t3t:"اربط وابدأ المعالجة",t3d:"اربط متجرك، واضبط التحويلات إلى حسابك البنكي/IBAN، وابدأ بقبول مدفوعات البطاقات مباشرة.",
+  fq1:"ماذا يشمل تسليم الحساب؟",fa1:"الوصول إلى الحساب والبريد الأصلي الموثق ومفاتيح 2FA ودليل التسليم.",fq2:"كيف يعمل ضمان الثلاثين يومًا؟",fa2:"يشمل الضمان الاستبدال حتى 30 يومًا عند حجز التحقق الأولي أو القفل غير المتوقع، وفقًا لشروطه.",fq3:"هل تُسخّن الحسابات قبل التسليم؟",fa3:"تُجهّز الحسابات بنشاط أساسي قبل التسليم.",fq4:"كم يستغرق التسليم؟",fa4:"عادةً ما تُسلّم الحسابات المتاحة في اليوم نفسه؛ ويُؤكد الموعد المحدد قبل الدفع.",fq5:"هل يمكنني التحكم في الوصول والتحويلات؟",fa5:"يجب إدارة الوصول والتحويلات وفق قواعد المنصة وبيانات الشركة المعنية.",
+  fe:"شراء حساب",fh:"اطلب حسابك الموثق.",fs:"اختر باقتك أدناه وتواصل معنا مباشرة — نرد خلال دقائق بتفاصيل المخزون المتاح والدفع.",fo:"ما باقة الحساب التي تحتاجها؟",o1:"حساب Stripe موثق",o2:"حساب Shopify موثق مع المدفوعات",o3:"باقة Stripe وShopify مع ضمان 30 يومًا",sb:"اطلب الآن",ft1:"© 2026 Ledgerline. بنية مدفوعات موثقة للتجارة الإلكترونية.",
+  z1:"هل تحتاج إلى باقة Stripe وShopify معًا؟",z2:"هل تحتاج إلى منطقة الولايات المتحدة أو المملكة المتحدة أو الاتحاد الأوروبي؟",z3:"هل سيتجاوز حجم المعالجة الشهري المتوقع 10,000 دولار؟",z4:"هل لديك جهاز وشبكة آمنان ومخصصان للوصول إلى الحساب؟",z5:"هل ترغب في ضمان الاستبدال لمدة 30 يومًا؟",g1:"باقة المنصة",g2:"منطقة الكيان",g3:"مستوى حجم المعالجة",g4:"إعداد الوصول الآمن",g5:"مستوى الضمان",sc:"الباقة المناسبة",gh:"تفاصيل تحتاج إلى تأكيد",r_hi:"تشير إجاباتك بوضوح إلى باقة مناسبة.",r_mid:"نحتاج إلى تأكيد بعض التفاصيل لاختيار الباقة.",r_lo:"لنجد باقة تناسب احتياجاتك.",qc:"اختر باقتي",qa:"أعد المحاولة",
+  docTitle:"Ledgerline — حسابات Stripe وShopify موثقة ومُعدّة",navHome:"الرئيسية",navFeedbacks:"آراء العملاء",navAccounts:"الحسابات",languageLabel:"اللغة",themeLabel:"تغيير السمة",
+  footerDescription:"حسابات Stripe وShopify موثقة ومُعدّة مسبقًا للأعمال عبر الإنترنت.",footerExplore:"استكشف",footerCommunity:"المجتمع",footerPolicies:"السياسات",footerIncluded:"ما الذي يتضمنه العرض",footerProcess:"الخطوات",footerFaq:"الأسئلة الشائعة",footerContact:"تواصل",footerBlog:"المدونة",footerFeedbacks:"آراء العملاء",footerAccounts:"الحسابات",footerAbout:"من نحن",footerPoliciesLink:"السياسات",footerRefund:"سياسة الاسترداد",footerDisclaimer:"لسنا تابعين لـ Stripe أو Shopify. الأسماء والعلامات التجارية مملوكة لأصحابها."
+ },
+ zh:{
+  n1:"服务内容",cta:"购买账户",h1:"即开即用的支付账户，助您从第一天开始运营。",bd:"已验证的 Stripe 与 Shopify 账户",sub:"提供预验证、预热的 Stripe 和 Shopify 账户，KYC/KYB 已完成且支付功能已启用，可从第一天开始使用。",b2:"查找适合我的套餐",mt1:"最高 30 天保修",mt2:"当日交付",mt3:"完整账户访问与 2FA 交接",
+  st1:"已售账户",st2:"平均交付时间",st3:"可用国家和地区",pe:"包含内容",ph:"从“下单”到“首笔实时回款”的一切。",p1t:"预验证、预热的 Stripe 与 Shopify 账户",p1d:"KYC 和 KYB 已完成，银行卡支付与回款已启用——可直接连接店铺，并提供完整账户、邮箱和 2FA 访问权限。",p2s:"● 30 天保修",p2t:"最高 30 天替换保修",p2d:"每个账户均享有最长 30 天的替换保障，覆盖初始验证冻结或意外锁定。",p3t:"多币种与即时回款路由",p3d:"美国、英国和欧盟实体已完成验证，可在目标市场通过银行或 IBAN 快速结算。",p4s:"当日交付",p4t:"预热记录与安全交接指南",p4d:"账户已通过干净的基础活动预热，并附带逐步 IP/代理设置指南，助您从第一天起平稳扩展。",
+  be:"对比",bh:"全新申请与预验证、预热账户的对比。",bt:"全新申请",at:"即用账户",b1:"等待 KYC/KYB 审核",b2x:"新账户可能触发额外审核",b3:"没有替换保障",b4:"没有支付历史",a1:"KYC 和 KYB 已完成",a2:"已有预热活动记录",a3:"支付与回款已启用",a4:"最高 30 天替换保修",
+  qzh:"30 秒找到适合您的账户套餐。",qzs:"回答 5 个问题，了解适合您的套餐。",qe:"流程",qh:"三步完成交付并开始收款。",qs:"选择步骤查看交付详情。",t1t:"选择套餐",t1d:"选择平台（Stripe、Shopify 或组合）、实体地区（美国、英国、欧盟）以及最高 30 天的保修方案。",t2t:"快速交接",t2d:"在 30–60 分钟内收到登录凭证、原始验证邮箱、2FA 密钥和 IP/代理设置指南。",t3t:"连接并收款",t3d:"连接店铺，将回款路由至您的银行/IBAN，并立即接受银行卡付款。",
+  fq1:"账户交接包含哪些内容？",fa1:"账户访问权限、原始验证邮箱、2FA 密钥和交接指南。",fq2:"30 天保修如何运作？",fa2:"根据保修条款，若遇到初始验证冻结或意外锁定，可在最长 30 天内申请替换。",fq3:"账户交付前会预热吗？",fa3:"账户会在交付前通过基础活动进行准备。",fq4:"交付需要多长时间？",fa4:"有库存的账户通常当日交付；付款前会确认具体时间。",fq5:"我能管理账户访问和回款吗？",fa5:"账户访问和回款须按照平台规则及相关企业资料进行管理。",
+  fe:"购买账户",fh:"订购已验证账户。",fs:"选择下方套餐并直接联系我们。我们会在几分钟内回复库存和付款详情。",fo:"您需要哪种账户套餐？",o1:"已验证 Stripe 账户",o2:"已验证 Shopify 账户及支付功能",o3:"Stripe + Shopify 组合套餐（含 30 天保修）",sb:"立即下单",ft1:"© 2026 Ledgerline。已验证的电商支付基础设施。",
+  z1:"您需要 Stripe 与 Shopify 组合套餐吗？",z2:"您需要美国、英国还是欧盟地区的实体？",z3:"预计月处理额会超过 10,000 美元吗？",z4:"您是否有专用且安全的设备和网络来访问账户？",z5:"您需要 30 天替换保修吗？",g1:"平台套餐",g2:"实体地区",g3:"处理量级",g4:"安全访问设置",g5:"保修方案",sc:"套餐匹配度",gh:"待确认的套餐详情",r_hi:"您的答案清楚地匹配到合适的套餐。",r_mid:"还需确认一些信息来选择套餐。",r_lo:"让我们找到适合您需求的账户套餐。",qc:"选择套餐",qa:"重新测试",
+  docTitle:"Ledgerline — 已验证并完成准备的 Stripe 与 Shopify 账户",navHome:"首页",navFeedbacks:"客户反馈",navAccounts:"账户",languageLabel:"语言",themeLabel:"切换主题",
+  footerDescription:"为在线业务提供预验证并完成准备的 Stripe 与 Shopify 账户。",footerExplore:"探索",footerCommunity:"社区",footerPolicies:"政策",footerIncluded:"包含内容",footerProcess:"流程",footerFaq:"常见问题",footerContact:"联系",footerBlog:"博客",footerFeedbacks:"客户反馈",footerAccounts:"账户",footerAbout:"关于",footerPoliciesLink:"政策",footerRefund:"退款政策",footerDisclaimer:"与 Stripe 或 Shopify 无关联。其名称与商标归各自所有者所有。"
+ }
+};
+function tr(k){var copy=COPY[L]||{};if(copy[k])return copy[k];var pillar=PILLARS[L]||PILLARS.en;if(pillar[k])return pillar[k];return ((L==='en'?EN:T[L])||EN)[k]||EN[k]}
+function pick(){var ls=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'en'];for(var i=0;i<ls.length;i++){var c=String(ls[i]).slice(0,2).toLowerCase();if(c==='en'||T[c])return c}return 'en'}
+var sel=document.getElementById('lang'),pref='auto';
+try{pref=localStorage.getItem('lg')||'auto'}catch(e){}
+function setL(){L=pref==='auto'?pick():pref;sel.value=pref;els.forEach(function(e){e.textContent=tr(e.dataset.i)});
+  R.lang=L;R.dir=L==='ar'?'rtl':'ltr';sel.setAttribute('aria-label',tr('languageLabel'));document.getElementById('thm').setAttribute('aria-label',tr('themeLabel'));rq();rstp();rcur()}
+sel.addEventListener('change',function(){pref=sel.value;try{pref==='auto'?localStorage.removeItem('lg'):localStorage.setItem('lg',pref)}catch(e){}setL()});
+window.addEventListener('languagechange',function(){if(pref==='auto')setL()});
+
+var mq=matchMedia('(prefers-color-scheme:dark)'),mode=R.getAttribute('data-mode')||'auto';
+function setT(){var theme=mode==='auto'?(mq.matches?'dark':'light'):mode;R.setAttribute('data-theme',theme);R.setAttribute('data-mode',mode);var src=theme==='light'
+  ?'https://cdn.brandfetch.io/idAgPm7IvG/theme/dark/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B'
+  :'https://cdn.brandfetch.io/idAgPm7IvG/theme/light/logo.svg?c=1dxbfHSJFAPEGdCLU4o5B';
+  document.querySelectorAll('.shopify-theme-logo').forEach(function(img){img.src=src});}
+document.getElementById('thm').addEventListener('click',function(){mode=mode==='auto'?'light':mode==='light'?'dark':'auto';try{mode==='auto'?localStorage.removeItem('thm'):localStorage.setItem('thm',mode)}catch(e){}setT()});
+(mq.addEventListener?mq.addEventListener('change',function(){if(mode==='auto')setT()}):mq.addListener(function(){if(mode==='auto')setT()}));
+
+var G='<span class="lg"><svg width="26" height="26"><use href="#stripe"/></svg>Stripe</span><span class="lg"><img class="shopify-theme-logo" alt="Shopify" width="90" height="26" style="object-fit:contain"></span><span class="lg" style="color:var(--blue);font-style:italic;font-weight:800;letter-spacing:.02em">VISA</span><span class="lg"><svg width="34" height="22" viewBox="0 0 34 22"><circle cx="11" cy="11" r="10" fill="#EB001B"/><circle cx="23" cy="11" r="10" fill="#F79E1B" fill-opacity=".9"/></svg>mastercard</span><span class="lg"><span style="color:var(--pp)">Pay</span><span style="color:#009cde;margin-inline-start:-6px">Pal</span></span><span class="lg pill" style="background:#FFB3C7;color:#0e0f0c">Klarna</span><span class="lg">Apple Pay</span><span class="lg">Google Pay</span><span class="lg pill" style="background:#5a31f4;color:#fff">shop Pay</span><span class="lg pill" style="background:#2E77BC;color:#fff">AMEX</span><span class="lg pill" style="background:#163300;color:#9FE870">wise</span><span class="lg pill" style="background:var(--ink);color:var(--bg)">Revolut</span>';
+document.getElementById('mt').innerHTML='<div>'+G+'</div><div aria-hidden="true">'+G+'</div>';
+
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+if(CFG.SHOW_PROOF)document.getElementById('proof').hidden=false;
+
+var stats=document.querySelector('.stats');
+if(stats){
+  var statsObserver=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(!entry.isIntersecting)return;
+      statsObserver.unobserve(entry.target);
+      if(window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+        entry.target.querySelector('[data-count="3000"]').textContent='3K+';
+        entry.target.querySelector('[data-range-count]').textContent='30–60 min';
+        entry.target.querySelector('[data-count="75"]').textContent='75+';
+        return;
+      }
+      var counters=entry.target.querySelectorAll('[data-count]');
+      counters.forEach(function(el){
+        var end=+el.dataset.count,step=Math.max(1,Math.ceil(end/75)),value=0;
+        var timer=setInterval(function(){value=Math.min(end,value+step);el.textContent=(end===3000?(value/1000).toFixed(value===end?'0':'1'):value)+el.dataset.suffix;if(value===end)clearInterval(timer)},20);
+      });
+      var setup=entry.target.querySelector('[data-range-count]');
+      var end=+setup.dataset.rangeCount,step=Math.max(1,Math.ceil(end/75)),value=0;
+      var setupTimer=setInterval(function(){value=Math.min(end,value+step);setup.textContent=(value<end?(value+' min'):'30–60 min');if(value===end)clearInterval(setupTimer)},20);
+    });
+  },{threshold:.4});
+  statsObserver.observe(stats);
+}
+
+var ch=document.querySelectorAll('.chk'),fill=document.getElementById('fill'),pct=document.getElementById('pct'),msg=document.getElementById('msg'),touched=false;
+function upd(){var n=document.querySelectorAll('.chk.on').length,p=Math.round(n/ch.length*100);fill.style.width=p+'%';pct.textContent=p+'%';msg.dataset.i=p===100?'m1':'m0';msg.textContent=tr(msg.dataset.i)}
+ch.forEach(function(c){c.addEventListener('click',function(){touched=true;c.classList.toggle('on');upd()})});
+setTimeout(function(){var i=1;(function nx(){if(touched||i>=ch.length)return;ch[i++].classList.add('on');upd();setTimeout(nx,750)})()},1400);
+
+var st=document.querySelectorAll('.step');
+st.forEach(function(s){s.addEventListener('click',function(){st.forEach(function(x){x.classList.remove('act')});s.classList.add('act')})});
+
+var REG={US:'USD',GB:'GBP',FR:'EUR',DE:'EUR',ES:'EUR',IT:'EUR',MA:'MAD',DZ:'DZD',TN:'TND',EG:'EGP',AE:'AED',SA:'SAR',NG:'NGN',ZA:'ZAR',CN:'CNY',IN:'INR',JP:'JPY',CA:'CAD',AU:'AUD'};
+function rcur(){var r=((navigator.language||'').split('-')[1]||'').toUpperCase(),tz='';try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||''}catch(e){}
+  var c=REG[r]||(tz==='Africa/Casablanca'?'MAD':'USD'),a=[c,'USD','EUR','GBP'].filter(function(v,i,s){return s.indexOf(v)===i}).slice(0,4);document.getElementById('cur').textContent=a.join(' · ')}
+
+var qzEl=document.getElementById('qz'),qi=0,ans=[];
+function rq(){var h='';
+  if(qi<5){h='<div class="flex gap-1.5" style="margin-bottom:22px">'+[0,1,2,3,4].map(function(i){return '<i style="flex:1;height:4px;border-radius:9px;background:'+(i<=qi?'var(--accent)':'var(--soft)')+'"></i>'}).join('')+'</div><div style="font-size:19px;font-weight:700;line-height:1.35;min-height:76px">'+tr('z'+(qi+1))+'</div><div class="flex gap-3" style="margin-top:20px"><button class="chip" style="flex:1;text-align:center" data-a="1">'+tr('yes')+'</button><button class="chip" style="flex:1;text-align:center" data-a="0">'+tr('no')+'</button></div>'}
+  else{var s=Math.round(ans.reduce(function(a,b){return a+b},0)/5*100),r=s>=80?'r_hi':s>=40?'r_mid':'r_lo',gp=ans.map(function(v,i){return v?'':'<li style="margin-top:6px">✕ '+tr('g'+(i+1))+'</li>'}).join('');window.__score=s;
+    h='<div class="flex items-center gap-5"><div class="ring" style="--p:'+s+'"><b>'+s+'%</b></div><div><div class="eyebrow">'+tr('sc')+'</div><div style="font-weight:700;font-size:18px;line-height:1.35;margin-top:4px">'+tr(r)+'</div></div></div>'+(gp?'<div class="eyebrow" style="margin-top:22px">'+tr('gh')+'</div><ul style="list-style:none;padding:0;margin:6px 0 0;font-size:15px">'+gp+'</ul>':'')+'<div class="flex gap-3 flex-wrap" style="margin-top:22px"><a href="#start" class="btn">'+tr('qc')+'<span class="arr">→</span></a><button class="btn ghost" data-r="1">'+tr('qa')+'</button></div>'}
+  qzEl.innerHTML=h}
+qzEl.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;if(b.dataset.a!==undefined){ans.push(+b.dataset.a);qi++;rq()}else if(b.dataset.r){qi=0;ans=[];window.__score=null;rq()}});
+
+var f=document.getElementById('lead'),s1=document.getElementById('s1'),s2=document.getElementById('s2'),stpEl=document.getElementById('stp'),type='',step=1;
+function rstp(){stpEl.textContent=tr('stp').replace('{a}',step)}
+s1.addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;type=EN[b.dataset.t];step=2;s1.hidden=true;s2.hidden=false;rstp();var i=f.querySelector('input[name=name]');i&&i.focus({preventScroll:true})});
+document.getElementById('back').addEventListener('click',function(){step=1;s2.hidden=true;s1.hidden=false;rstp()});
+
+function link(t){var q=encodeURIComponent(t);if(CFG.WA)return 'https://wa.me/'+CFG.WA+'?text='+q+'&'+UTM;if(CFG.EMAIL)return 'mailto:'+CFG.EMAIL+'?subject=Setup%20request&body='+q;return ''}
+function send(t){var u=link(t);if(u){location.href=u}}
+var fw=document.getElementById('fwa'),ft=document.getElementById('ftg');
+if(CFG.WA)fw.href='https://wa.me/'+CFG.WA+'?text='+encodeURIComponent('Hi, I\'d like to buy a Stripe + Shopify account.')+'&'+UTM;
+if(CFG.TG)ft.href='https://t.me/'+CFG.TG+'?'+UTM;
+f.addEventListener('submit',function(e){e.preventDefault();var o=document.getElementById('ok');o.style.display='block';
+  var t='Hi, I’m '+f.elements.name.value.trim()+(f.handle.value?', '+f.handle.value:'')+'. '+type+'. Volume: '+f.vol.value+'.'+(window.__score!=null?' Readiness score: '+window.__score+'%.':'');
+  o.style.color='var(--ok)';o.textContent=tr('ok').replace('{n}',f.elements.name.value.trim().split(' ')[0]);send(t)});
+
+var dock=document.getElementById('dock'),hero=document.getElementById('top'),startEl=document.getElementById('start');
+function updateDock(){var y=window.scrollY,r=startEl.getBoundingClientRect(),inForm=r.top<innerHeight*.6&&r.bottom>0;dock.classList.toggle('show',y>hero.offsetHeight*.7&&!inForm)}
+window.addEventListener('scroll',updateDock,{passive:true});
+
+var xm=document.getElementById('xm'),shown=false;
+function cx(){xm.classList.remove('show')}
+document.addEventListener('mouseout',function(e){if(!e.relatedTarget&&e.clientY<=0&&!shown&&scrollY>400){shown=true;xm.classList.add('show')}});
+document.getElementById('xn').addEventListener('click',cx);
+xm.addEventListener('click',function(e){if(e.target===xm)cx()});
+document.getElementById('xb').addEventListener('click',cx);
+
+var lap=document.getElementById('lap'),rig=lap.querySelector('.rig');
+lap.addEventListener('pointermove',function(e){var r=lap.getBoundingClientRect();rig.style.setProperty('--rx',((e.clientX-r.left)/r.width-.5)*10+'deg');rig.style.setProperty('--ry',((e.clientY-r.top)/r.height-.5)*-6+'deg')});
+lap.addEventListener('pointerleave',function(){rig.style.setProperty('--rx','0deg');rig.style.setProperty('--ry','0deg')});
+var iconDock=document.getElementById('dk'),di=[].slice.call(iconDock.querySelectorAll('.di')),tip=document.getElementById('tip'),cur=document.getElementById('dcur'),ai=3,hov=false,nm=['Shopify','PayPal','Wise','Stripe','Revolut','Mastercard','Klarna'];
+function act(i){ai=i;di.forEach(function(d,k){d.classList.toggle('on',k===i);d.classList.toggle('nb',Math.abs(k-i)===1)});var d=di[i];tip.textContent=nm[i];tip.style.left=(d.offsetLeft+d.offsetWidth/2)+'px';cur.style.left=(d.offsetLeft+d.offsetWidth*.62)+'px';cur.style.top=(d.offsetTop+d.offsetHeight*.72)+'px'}
+di.forEach(function(d,k){d.addEventListener('mouseenter',function(){hov=true;act(k)})});
+iconDock.addEventListener('mouseleave',function(){hov=false});
+setInterval(function(){if(!hov)act((ai+1)%di.length)},1900);
+window.addEventListener('resize',function(){act(ai)});act(3);
+
+
+setT();setL();
+})();
+</script>
+</body>
+</html>

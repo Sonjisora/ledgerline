@@ -1,0 +1,2 @@
+[functions.generate-daily-blog]
+verify_jwt = false
